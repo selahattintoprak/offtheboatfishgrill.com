@@ -1,1 +1,1 @@
-export default { src: "box.svg", title: "Moving", badge: "DEALS" };
+export default { src: "logo-light.png", title: "", alt: "Greg's Truck Repair", badge: "" };

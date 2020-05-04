@@ -5,7 +5,7 @@ export const config = { amp: true };
 
 export default () => (
   <>
-    <SinglePage title="Moving Deals" description="Compare Moving Deals & Quotes">
+    <SinglePage title="Greg's Truck Repair" description="Greg's Truck Repair">
       <section className="section section-quotes" style={{ background: "#3dc2ff" }}>
         <div className="container">
           <div className="columns">
