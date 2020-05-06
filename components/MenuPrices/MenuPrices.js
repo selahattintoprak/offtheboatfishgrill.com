@@ -30,6 +30,7 @@ export default ({ id, menuPrices }) => (
     <style jsx global>
       {`
         .amp-accordion {
+          margin-bottom: 6px;
         }
         .amp-accordion-header {
           display: flex;
@@ -38,16 +39,17 @@ export default ({ id, menuPrices }) => (
           padding: 16px;
           background-color: white;
           outline: none;
+          color:#ed1c24;
         }
         .amp-accordion-body {
         }
         .amp-accordion .amp-accordion-header .icon {
           float: right;
-          transform: rotate(-90deg);
+          transform: rotate(90deg);
           transition: transform 0.25s;
         }
         .amp-accordion[expanded] .amp-accordion-header .icon {
-          transform: rotate(90deg);
+          transform: rotate(-90deg);
         }
       `}
     </style>

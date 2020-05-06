@@ -3,6 +3,8 @@ export default {
   description: "This will be the page meta description",
   canonical: "https://www.canonicalurl.ie/",
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
     url: "https://www.canonicalurl.ie/",
     title: "Open Graph Title",
     description: "Open Graph Description",

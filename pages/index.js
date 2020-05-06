@@ -4,7 +4,6 @@ import MenuPrices from "../components/MenuPrices/MenuPrices";
 import menuPrices from "../src/data/client/menu_prices";
 import AboutUs from "../components/AboutUs/AboutUs";
 import ContactUs from "../components/ContactUs/ContactUs";
-import Copyright from "../components/Copyright/Copyright";
 
 export const config = { amp: true };
 
@@ -35,6 +34,7 @@ export default () => (
           <div className="columns">
             <div className="column col-md-12 col-10 col-mx-auto">
               <div className="">
+                <h2>Services / Price List</h2>
                 <MenuPrices id="menu-prices" menuPrices={menuPrices} />
               </div>
             </div>

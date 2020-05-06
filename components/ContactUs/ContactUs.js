@@ -1,6 +1,16 @@
 import ContactForm from "./ContactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapPin, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
+import { faMapPin, faMobileAlt, faBusinessTime } from "@fortawesome/free-solid-svg-icons";
+
+const timeTable = [
+  { day: "Monday", time: " 8 am – 8 pm" },
+  { day: "Tuesday", time: "8 am – 8 pm" },
+  { day: "Wednesday", time: " 8 am – 8 pm" },
+  { day: "Thursday ", time: "8 am – 8 pm" },
+  { day: "Friday", time: "8 am – 8 pm" },
+  { day: "Saturday", time: "8 am – 8 pm" },
+  { day: "Sunday", time: "Closed" },
+];
 
 export default () => (
   <>
@@ -25,6 +35,18 @@ export default () => (
             </div>
             <div className="column col-11">
               <a href="tel:1-562-867-5309">1-562-867-5309</a>
+            </div>
+          </div>
+          <div className="columns address">
+            <div className="column col-1">
+              <FontAwesomeIcon className="form-icon" icon={faBusinessTime} />
+            </div>
+            <div className="column col-11">
+              {timeTable.map(({ day, time }) => (
+                <div>
+                  {day} {time}
+                </div>
+              ))}
             </div>
           </div>
         </div>
