@@ -2,6 +2,10 @@ import Quotes from "../components/Quotes/Quotes";
 import SinglePage from "../components/SinglePage/SinglePage";
 import MenuPrices from "../components/MenuPrices/MenuPrices";
 import menuPrices from "../src/data/client/menu_prices";
+import AboutUs from "../components/AboutUs/AboutUs";
+import ContactUs from "../components/ContactUs/ContactUs";
+import Copyright from "../components/Copyright/Copyright";
+
 export const config = { amp: true };
 
 export default () => (
@@ -32,6 +36,28 @@ export default () => (
             <div className="column col-md-12 col-10 col-mx-auto">
               <div className="">
                 <MenuPrices id="menu-prices" menuPrices={menuPrices} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section section-about-us">
+        <div className="container">
+          <div className="columns">
+            <div className="column col-md-12 col-10 col-mx-auto">
+              <div className="">
+                <AboutUs />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section section-contact-us">
+        <div className="container">
+          <div className="columns">
+            <div className="column col-md-12 col-10 col-mx-auto">
+              <div className="">
+                <ContactUs />
               </div>
             </div>
           </div>
