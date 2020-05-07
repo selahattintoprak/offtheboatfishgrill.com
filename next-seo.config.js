@@ -21,7 +21,6 @@ export const LocalBussinesData = {
     latitude: "",
     longitude: "",
   },
-
   images: [SITE_URL + "/favicon.png", SITE_URL + "/images/main-imag.jpg"],
   openingHoursSpecification: [
     {

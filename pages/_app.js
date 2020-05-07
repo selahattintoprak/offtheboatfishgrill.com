@@ -2,18 +2,18 @@ import React from "react";
 import App from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
-import { DefaultSeo } from "next-seo";
+import { DefaultSeo, LocalBusinessJsonLd } from "next-seo";
 
 import theme from "../src/theme";
 
 import Router from "next/router";
 import * as gtag from "../lib/gtag";
 
-import SEO from "../next-seo.config";
+import SEO, { LocalBussinesData } from "../next-seo.config";
 import { StylesStyles as UIStyles } from "../ui-styles/styles";
 import GlobalStyles from "../styles/global.scss";
 
-Router.events.on("routeChangeComplete", url => gtag.pageview(url));
+Router.events.on("routeChangeComplete", (url) => gtag.pageview(url));
 
 export default class MyApp extends App {
   render() {
@@ -25,10 +25,13 @@ export default class MyApp extends App {
           <title>My page</title>
         </Head>
         <ThemeProvider theme={theme}>
-          <DefaultSeo config={{ ...SEO }} />
+          <DefaultSeo {...SEO} />
+          <LocalBusinessJsonLd {...LocalBussinesData} />
           <Component {...pageProps} />
           <UIStyles />
-          <style jsx global>{GlobalStyles}</style>
+          <style jsx global>
+            {GlobalStyles}
+          </style>
         </ThemeProvider>
       </React.Fragment>
     );
