@@ -1,22 +1,22 @@
 export default ({ id, menuPrices }) => (
   <>
     <amp-accordion id={id} className="amp-accordion-container" disable-session-states="" animate="">
-      {menuPrices.map(({ title, description, items, footer, link }, key) => (
-        <section className="amp-accordion" key={id + key}>
+      {menuPrices.map(({ title, description, items, footer, link }, index) => (
+        <section className="amp-accordion" key={id + index}>
           <h2 className="amp-accordion-header" style={{ fontSize: "1rem", padding: "0.3rem" }}>
             {title}
-            <i class="icon icon-arrow-right"></i>
+            <i className="icon icon-arrow-right"></i>
           </h2>
           <div className="amp-accordion-body my-2">
-            <div class="container" key={key}>
+            <div className="container">
               {description}
-              {items.map(({ title, description, price }, key) => (
-                <div class="columns" style={{ alignItems: "center" }}>
-                  <div class="column col-9">
+              {items.map(({ title, description, price }, index) => (
+                <div className="columns" style={{ alignItems: "center" }} key={"col" + index}>
+                  <div className="column col-9">
                     <strong>{title}</strong> <br></br>
-                    <span style={{ color: "rgb(94, 94, 94)" , fontWeight:"400"}}>{description}</span>
+                    <span style={{ color: "rgb(94, 94, 94)", fontWeight: "400" }}>{description}</span>
                   </div>
-                  <div class="column col-3 text-center">
+                  <div className="column col-3 text-center">
                     <strong>{price}</strong>
                   </div>
                 </div>
@@ -39,7 +39,7 @@ export default ({ id, menuPrices }) => (
           padding: 16px;
           background-color: white;
           outline: none;
-          color:#ed1c24;
+          color: #ed1c24;
         }
         .amp-accordion-body {
         }

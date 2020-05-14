@@ -2,7 +2,7 @@ import ActiveLink from "../ActiveLink";
 import { BreadcrumbsStyles } from "../../ui-styles/styles";
 export default ({ items }) => (
   <>
-    <ul class="breadcrumb">
+    <ul className="breadcrumb">
       {items.map((item, index) => (
         <MenuItem {...item} key={index} />
       ))}

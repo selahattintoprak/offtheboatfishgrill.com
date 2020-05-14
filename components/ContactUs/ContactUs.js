@@ -43,7 +43,7 @@ export default () => (
             </div>
             <div className="column col-11">
               {timeTable.map(({ day, time }) => (
-                <div>
+                <div key={day}>
                   {day} {time}
                 </div>
               ))}
