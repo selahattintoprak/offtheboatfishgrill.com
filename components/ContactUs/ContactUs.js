@@ -17,36 +17,40 @@ export default () => (
     <div className="container">
       <h2 className="text-center">Contact Us</h2>
       <div className="columns">
-        <div className="column col-md-12 col-6 col-mx-auto">
-          <ContactForm />
+        <div className="column col-md-12 col-6">
+          <div className="column col-xl-12 col-8 col-mx-auto">
+            <ContactForm />
+          </div>
         </div>
-        <div className="column col-md-12 col-6 col-mx-auto">
-          <div className="columns address">
-            <div className="column col-1">
-              <FontAwesomeIcon className="form-icon" icon={faMapPin} />
+        <div className="column col-md-12 col-6">
+          <div className="column col-xl-12 col-8 col-mx-auto">
+            <div className="columns address">
+              <div className="column col-1">
+                <FontAwesomeIcon className="form-icon" icon={faMapPin} />
+              </div>
+              <div className="column col-11">
+                <span>3500 North 9th Street, Saint Louis, Missouri 63147, United States</span>
+              </div>
             </div>
-            <div className="column col-11">
-              <span>3500 North 9th Street, Saint Louis, Missouri 63147, United States</span>
+            <div className="columns address">
+              <div className="column col-1">
+                <FontAwesomeIcon className="form-icon" icon={faMobileAlt} />
+              </div>
+              <div className="column col-11">
+                <a href="tel:1-562-867-5309">1-562-867-5309</a>
+              </div>
             </div>
-          </div>
-          <div className="columns address">
-            <div className="column col-1">
-              <FontAwesomeIcon className="form-icon" icon={faMobileAlt} />
-            </div>
-            <div className="column col-11">
-              <a href="tel:1-562-867-5309">1-562-867-5309</a>
-            </div>
-          </div>
-          <div className="columns address">
-            <div className="column col-1">
-              <FontAwesomeIcon className="form-icon" icon={faBusinessTime} />
-            </div>
-            <div className="column col-11">
-              {timeTable.map(({ day, time }) => (
-                <div key={day}>
-                  {day} {time}
-                </div>
-              ))}
+            <div className="columns address">
+              <div className="column col-1">
+                <FontAwesomeIcon className="form-icon" icon={faBusinessTime} />
+              </div>
+              <div className="column col-11">
+                {timeTable.map(({ day, time }) => (
+                  <div key={day}>
+                    {day} {time}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

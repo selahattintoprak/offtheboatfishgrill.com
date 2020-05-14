@@ -13,7 +13,7 @@ export default () => (
       <section className="section section-slideshow">
         <div className="container">
           <div className="columns">
-            <div className="column col-md-12 col-8 col-mx-auto col-my-auto">
+            <div className="column col-lg-12 col-8 col-mx-auto ">
               <h1
                 className="text-center"
                 style={{
@@ -32,7 +32,7 @@ export default () => (
       <section className="section section-menu-prices">
         <div className="container">
           <div className="columns">
-            <div className="column col-md-12 col-8 col-mx-auto">
+            <div className="column col-lg-12 col-8 col-mx-auto">
               <div className="">
                 <h2>Services / Price List</h2>
                 <MenuPrices id="menu-prices" menuPrices={menuPrices} />
@@ -44,7 +44,7 @@ export default () => (
       <section className="section section-about-us">
         <div className="container">
           <div className="columns">
-            <div className="column col-md-12 col-8 col-mx-auto">
+            <div className="column col-lg-12 col-8 col-mx-auto">
               <div className="">
                 <AboutUs />
               </div>
@@ -55,7 +55,7 @@ export default () => (
       <section className="section section-contact-us">
         <div className="container">
           <div className="columns">
-            <div className="column col-md-12 col-8 col-mx-auto">
+            <div className="column col-lg-12 col-8 col-mx-auto">
               <div className="">
                 <ContactUs />
               </div>
