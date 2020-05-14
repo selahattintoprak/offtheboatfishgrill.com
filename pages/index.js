@@ -4,7 +4,7 @@ import MenuPrices from "../components/MenuPrices/MenuPrices";
 import menuPrices from "../src/data/client/menu_prices";
 import AboutUs from "../components/AboutUs/AboutUs";
 import ContactUs from "../components/ContactUs/ContactUs";
-
+import Content from "../src/data/content";
 export const config = { amp: true };
 
 export default () => (
@@ -25,6 +25,15 @@ export default () => (
               >
                 GREG'S TRUCK REPAIR IS OPEN ! ESSENTIAL BUSINESS MAINTAINING SUPPLY CHAIN
               </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section section-content">
+        <div className="container">
+          <div className="columns">
+            <div className="column col-lg-12 col-8 col-mx-auto">
+              <div className="content">{Content}</div>
             </div>
           </div>
         </div>
@@ -88,6 +97,10 @@ export default () => (
           background-position: center; /* Center the image */
           background-repeat: no-repeat; /* Do not repeat the image */
           background-size: cover; /* Resize the background image to cover the entire container */
+        }
+        .section-content .content {
+          height: 200px;
+          overflow-y: scroll;
         }
       `}
     </style>
