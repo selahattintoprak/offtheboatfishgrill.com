@@ -8,18 +8,18 @@ export default {
   url: siteUrl,
   telephone: "+1760-452-6133",
   email: "info@qcskinclinic.com.au",
-  address: { "@id": siteUrl + "/#/schema/address" },
+  address,
   geo: {
     latitude: "",
     longitude: "",
   },
-  //image: [SITE_URL + "/favicon.png", SITE_URL + "/images/main-imag.jpg"],
-  image: {
+  image: [siteUrl + "/favicon.png", siteUrl + "/static/images/main-image.jpg"],
+  /*  image: {
     "@type": "ImageObject",
     url: siteUrl + "/images/main-imag.jpg",
     width: "1000",
     height: "750",
-  },
+  }, */
   review: [
     {
       "@type": "Review",
@@ -45,8 +45,8 @@ export default {
   sameAs: [],
   hasMenu: "",
   hasMap: "https://goo.gl/maps/XwYwnzDodY3AfWg18",
-  openingHours: ["Mo-Fr 09:00-19:00", "Sa 10:00-19:00"],
-  openingHoursSpecification: [
+  //openingHours: ["Mo-Fr 09:00-19:00", "Sa 10:00-19:00"],
+  openingHours: [
     {
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "12:00",

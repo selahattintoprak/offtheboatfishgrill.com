@@ -9,7 +9,9 @@ import theme from "../src/theme";
 import Router from "next/router";
 import * as gtag from "../lib/gtag";
 
-import SEO, { LocalBussinesData } from "../next-seo.config";
+import SEO from "../next-seo.config";
+import localBussinesData from "../src/data/schema/localBussinesData";
+
 import { StylesStyles as UIStyles } from "../ui-styles/styles";
 import GlobalStyles from "../styles/global.scss";
 
@@ -26,7 +28,7 @@ export default class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <DefaultSeo {...SEO} />
-          <LocalBusinessJsonLd {...LocalBussinesData} />
+          <LocalBusinessJsonLd {...localBussinesData} />
           <Component {...pageProps} />
           <UIStyles />
           <style jsx global>

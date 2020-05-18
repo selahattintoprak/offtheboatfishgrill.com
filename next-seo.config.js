@@ -1,4 +1,4 @@
-const siteUrl = "";
+const siteUrl = "https://www.example.com";
 const path = "";
 const siteName = "";
 const orgName = "";
@@ -12,10 +12,10 @@ const address = {
 
 export const LocalBussinesData = {
   type: "LocalBusiness",
-  id: SITE_URL,
-  name: SITE_NAME,
+  id: siteUrl,
+  name: siteName,
   description: "",
-  url: SITE_URL,
+  url: siteUrl,
   telephone: "+1760-452-6133",
   email: "info@qcskinclinic.com.au",
   address,
@@ -26,7 +26,7 @@ export const LocalBussinesData = {
   //image: [SITE_URL + "/favicon.png", SITE_URL + "/images/main-imag.jpg"],
   image: {
     "@type": "ImageObject",
-    url: SITE_URL + "/images/main-imag.jpg",
+    url: siteUrl + "/images/main-imag.jpg",
     width: "1000",
     height: "750",
   },

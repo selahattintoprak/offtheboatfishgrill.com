@@ -1,7 +1,7 @@
-const siteUrl = "";
+const siteUrl = "https://www.example.com";
 const path = "";
-const siteName = "";
-const orgName = "";
+const siteName = "Example Website";
+const orgName = "Example Organization";
 const address = {
   streetAddress: "",
   addressLocality: "",
