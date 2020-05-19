@@ -1,17 +1,21 @@
 import { siteUrl, siteName, address } from "./constants";
 
 export default {
-  type: "LocalBusiness",
-  id: siteUrl,
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": siteUrl,
   name: siteName,
   description: "",
   url: siteUrl,
   telephone: "+1760-452-6133",
   email: "info@qcskinclinic.com.au",
-  address,
+  address: {
+    "@id": siteUrl + "/#/schema/address",
+  },
   geo: {
-    latitude: "",
-    longitude: "",
+    "@type": "GeoCoordinates",
+    latitude: "40.75",
+    longitude: "73.98",
   },
   image: [siteUrl + "/favicon.png", siteUrl + "/static/images/main-image.jpg"],
   /*  image: {
@@ -23,7 +27,7 @@ export default {
   review: [
     {
       "@type": "Review",
-      author: "",
+      author: "John Doe",
       datePublished: null,
       description: "",
       reviewRating: {
@@ -46,13 +50,15 @@ export default {
   hasMenu: "",
   hasMap: "https://goo.gl/maps/XwYwnzDodY3AfWg18",
   //openingHours: ["Mo-Fr 09:00-19:00", "Sa 10:00-19:00"],
-  openingHours: [
+  OpeningHoursSpecification: [
     {
+      "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "12:00",
       closes: "23:00",
     },
     {
+      "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Saturday"],
       opens: "12:00",
       closes: "23:00",

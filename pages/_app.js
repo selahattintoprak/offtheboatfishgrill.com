@@ -11,12 +11,14 @@ import * as gtag from "../lib/gtag";
 
 import SEO from "../next-seo.config";
 import localBussinesData from "../src/data/schema/localBussinesData";
+import postalAddress from "../src/data/schema/postalAddress";
 
 import { StylesStyles as UIStyles } from "../ui-styles/styles";
 import GlobalStyles from "../styles/global.scss";
 
 Router.events.on("routeChangeComplete", (url) => gtag.pageview(url));
-
+import { Person } from "schema-dts";
+import { JsonLd } from "react-schemaorg";
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
@@ -28,7 +30,8 @@ export default class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <DefaultSeo {...SEO} />
-          <LocalBusinessJsonLd {...localBussinesData} />
+          <JsonLd item={[{ ...localBussinesData }, { ...postalAddress }]} />
+          {/* <LocalBusinessJsonLd {...localBussinesData} /> */}
           <Component {...pageProps} />
           <UIStyles />
           <style jsx global>
