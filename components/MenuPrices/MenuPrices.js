@@ -39,7 +39,7 @@ export default ({ id, menuPrices }) => (
           padding: 16px;
           background-color: white;
           outline: none;
-          color: #ed1c24;
+          color: #b75b0a;
         }
         .amp-accordion-body {
         }

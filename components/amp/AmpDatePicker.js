@@ -13,7 +13,7 @@ export default ({ icon: { name: iconName, side } = {}, id, placeholder, classNam
       format="YYYY-MM-DD"
       open-after-select=""
       input-selector={`[name=${name}]`}
-      className={`my-2 example-picker space-between ${className || ""} ${
+      className={`example-picker space-between ${className || ""} ${
         side == "left" ? "has-icon-left" : side == "right" ? "has-icon-right" : ""
       }`}
     >

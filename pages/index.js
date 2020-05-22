@@ -1,77 +1,67 @@
 import Quotes from "../components/Quotes/Quotes";
 import SinglePage from "../components/SinglePage/SinglePage";
 import MenuPrices from "../components/MenuPrices/MenuPrices";
-import menuPrices from "../src/data/client/menu_prices";
+import iphoneRepairServices from "../src/data/client/iphone_repair_services";
+import ipadRepairervices from "../src/data/client/ipad_repair_services";
+import samsungRepairServices from "../src/data/client/samsung_repair_services";
 import AboutUs from "../components/AboutUs/AboutUs";
 import ContactUs from "../components/ContactUs/ContactUs";
 import Content from "../src/data/content";
+import AppointmentForm from "../components/AppointmentForm";
 export const config = { amp: true };
 
+let hCss = {
+  fontWeight: "bold",
+  color: "white",
+  textShadow: "2px 2px 8px black",
+  marginTop: "4rem",
+};
 export default () => (
   <>
     <SinglePage title="Greg's Truck Repair" description="Greg's Truck Repair">
-      <section className="section section-slideshow">
-        <div className="container">
-          <div className="columns">
-            <div className="column col-lg-12 col-8 col-mx-auto ">
-              <h1
-                className="text-center"
-                style={{
-                  fontSize: "1.75rem",
-                  fontWeight: "bold",
-                  color: "white",
-                  marginTop: "4rem",
-                }}
-              >
-                GREG'S TRUCK REPAIR IS OPEN ! ESSENTIAL BUSINESS MAINTAINING SUPPLY CHAIN
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section section-content">
+      <Section name="slideshow">
+        <h1 className="text-center" style={{ ...hCss, fontSize: "1.75rem" }}>
+          Cell Phone Repair in Temecula
+        </h1>
+        <h3 className="text-center" style={{ ...hCss, fontSize: "1.25rem" }}>
+          We Specialize in Cell phone repair including iPhone Repair, iPad Repair, Samsung Galaxy Repair, Computer and
+          Macbook Repair
+        </h3>
+      </Section>
+      {/*  <Section name="content">
+        <div className="content">{Content}</div>
+      </Section> */}
+      <Section name="menu-price">
         <div className="container">
           <div className="columns">
             <div className="column col-lg-12 col-8 col-mx-auto">
-              <div className="content">{Content}</div>
+                <h2>iPhone Repair</h2>
+                <MenuPrices id="menu-prices" menuPrices={iphoneRepairServices} />
+                <h2>iPad Repair</h2>
+                <MenuPrices id="menu-prices" menuPrices={ipadRepairervices} />
+                <h2>Samsung Repair</h2>
+                <MenuPrices id="menu-prices" menuPrices={samsungRepairServices} />
+            </div>
+            <div className="column col-lg-12 col-4 col-mx-auto">
+                <h2>Book Appointment</h2>
+                <amp-img
+                  alt="about us"
+                  src="/static/images/new-van-1.png"
+                  layout="responsive"
+                  height="142"
+                  width="300"
+                />
+                <AppointmentForm />
             </div>
           </div>
         </div>
-      </section>
-      <section className="section section-menu-prices">
-        <div className="container">
-          <div className="columns">
-            <div className="column col-lg-12 col-8 col-mx-auto">
-              <div className="">
-                <h2>Services / Price List</h2>
-                <MenuPrices id="menu-prices" menuPrices={menuPrices} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section section-about-us">
-        <div className="container">
-          <div className="columns">
-            <div className="column col-lg-12 col-8 col-mx-auto">
-              <div className="">
-                <AboutUs />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section section-contact-us">
-        <div className="container">
-          <div className="columns">
-            <div className="column col-lg-12 col-8 col-mx-auto">
-              <div className="">
-                <ContactUs />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </Section>
+      <Section name="about-us">
+        <AboutUs />
+      </Section>
+      <Section name="contact-us">
+        <ContactUs />
+      </Section>
     </SinglePage>
     <style jsx global>
       {`
@@ -105,4 +95,15 @@ export default () => (
       `}
     </style>
   </>
+);
+const Section = ({ name, children }) => (
+  <section className={`section section-${name}`}>
+    <div className="container">
+      <div className="columns">
+        <div className="column col-lg-12 col-8 col-mx-auto">
+          <div className="">{children}</div>
+        </div>
+      </div>
+    </div>
+  </section>
 );

@@ -9,7 +9,7 @@ export default ({ logoLink }) => (
     <div className="app-brand">
       <ActiveLink href={logoLink || "/"}>
         <a className="app-logo">
-          <amp-img alt={alt} src={"/static/images/" + src} height="44" width="239" />
+          {src && <amp-img alt={alt} src={"/static/images/" + src} height="44" width="239" />}
           {title && <h2>{title}</h2>}
           {badge && <h6 className="label label-secondary text-bold">{badge}</h6>}
         </a>

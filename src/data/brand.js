@@ -1,1 +1,1 @@
-export default { src: "logo-light.png", title: "", alt: "Greg's Truck Repair", badge: "" };
+export default { src: "", title: "Cell Phone Repair Temecula", alt: "", badge: "" };
