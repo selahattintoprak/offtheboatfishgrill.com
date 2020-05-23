@@ -1,4 +1,4 @@
-import { siteUrl, siteName, address } from "./constants";
+import { siteUrl, siteName, address, telephone, email,sameAs } from "./constants";
 
 export default {
   "@context": "https://schema.org",
@@ -7,8 +7,8 @@ export default {
   name: siteName,
   description: "",
   url: siteUrl,
-  telephone: "+1760-452-6133",
-  email: "info@qcskinclinic.com.au",
+  telephone,
+  email,
   address: {
     "@id": siteUrl + "/#/schema/address",
   },
@@ -17,13 +17,10 @@ export default {
     latitude: "40.75",
     longitude: "73.98",
   },
-  image: [siteUrl + "/favicon.png", siteUrl + "/static/images/main-image.jpg"],
-  /*  image: {
-    "@type": "ImageObject",
-    url: siteUrl + "/images/main-imag.jpg",
-    width: "1000",
-    height: "750",
-  }, */
+  //image: [siteUrl + "/favicon.png", siteUrl + "/static/images/main-image.jpg"],
+  image: {
+    "@id": siteUrl + "/#/schema/image/primary",
+  },
   review: [
     {
       "@type": "Review",
@@ -46,8 +43,7 @@ export default {
   priceRange: "$$",
   servesCuisine: "",
   areaServed: ["Carlsbad", "Camp Pendleton", "Oceanside", "Vista"],
-  sameAs: [],
-  hasMenu: "",
+  sameAs,
   hasMap: "https://goo.gl/maps/XwYwnzDodY3AfWg18",
   //openingHours: ["Mo-Fr 09:00-19:00", "Sa 10:00-19:00"],
   OpeningHoursSpecification: [

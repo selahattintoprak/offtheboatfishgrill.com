@@ -9,5 +9,7 @@ const address = {
   addressCountry: "USA",
   postalCode: "94612",
 };
-
-export { siteUrl, path, siteName, orgName, address };
+const telephone = "+1760-452-6133";
+const email = "info@qcskinclinic.com.au";
+const sameAs = [];
+export { siteUrl, path, siteName, orgName, address, telephone, email, sameAs };
