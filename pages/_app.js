@@ -10,15 +10,7 @@ import Router from "next/router";
 import * as gtag from "../lib/gtag";
 
 import SEO from "../next-seo.config";
-import website from "../src/data/schema/website";
-import webpage from "../src/data/schema/webpage";
-import localBussinesData from "../src/data/schema/localBussinesData";
-import postalAddress from "../src/data/schema/postalAddress";
-import services from "../src/data/schema/services";
-import logoImage from "../src/data/schema/logoImage";
-import slideshowImage from "../src/data/schema/slideshowImage";
-import pirmaryImage from "../src/data/schema/pirmaryImage";
-
+import schema from "../src/data/schema/schema";
 import { StylesStyles as UIStyles } from "../ui-styles/styles";
 import GlobalStyles from "../styles/global.scss";
 
@@ -36,18 +28,7 @@ export default class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <DefaultSeo {...SEO} />
-          <JsonLd
-            item={[
-              webpage,
-              website,
-              { ...localBussinesData },
-              { ...postalAddress },
-              ...services,
-              logoImage,
-              slideshowImage,
-              pirmaryImage,
-            ]}
-          />
+          <JsonLd item={schema} />
           {/* <LocalBusinessJsonLd {...localBussinesData} /> */}
           <Component {...pageProps} />
           <UIStyles />
