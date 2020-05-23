@@ -1,6 +1,7 @@
 import { siteUrl } from "./constants";
 
 export default {
+  "@context": "https://schema.org",
   "@type": "Article",
   "@id": siteUrl + "/#/schema/article",
   headline: "Example article headline",

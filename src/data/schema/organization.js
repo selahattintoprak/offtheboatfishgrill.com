@@ -1,6 +1,7 @@
 import { siteUrl, siteName, address, telephone, email, sameAs } from "./constants";
 
 export default {
+  "@context": "https://schema.org",
   "@type": "Organization",
   "@id": siteUrl + "/#/schema/organization",
   url: siteUrl,

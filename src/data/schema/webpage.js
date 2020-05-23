@@ -1,6 +1,7 @@
 import { siteUrl, path } from "./constants";
 
 export default {
+  "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": siteUrl + "/#/schema/webpage", //"https://www.example.com/example-post/",
   url: siteUrl + path,
