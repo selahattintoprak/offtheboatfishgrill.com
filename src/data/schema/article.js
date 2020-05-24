@@ -1,4 +1,6 @@
 import { siteUrl } from "./constants";
+import content from "../content";
+import { strip, newDate } from "../../../lib/schema";
 
 export default {
   "@context": "https://schema.org",
@@ -6,7 +8,7 @@ export default {
   "@id": siteUrl + "/#/schema/article",
   headline: "Example article headline",
   description: "Example article description",
-  articleBody: "",
+  articleBody: strip(content),
   keywords: "",
   isPartOf: {
     "@id": siteUrl + "/#/schema/webpage",
@@ -14,12 +16,12 @@ export default {
   mainEntityOfPage: {
     "@id": siteUrl + "/#/schema/webpage",
   },
-  datePublished: Date.now(),
-  dateModified: Date.now(),
+  datePublished: newDate(),
+  dateModified: newDate(),
   commentCount: 6,
   articleSection: "Cats,Dogs,Recipes",
   author: {
-    "@id": siteUrl + "/#/schema/person",
+    "@id": siteUrl + "/#/schema/organization",
   },
   publisher: {
     "@id": siteUrl + "/#/schema/organization",

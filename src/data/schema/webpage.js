@@ -1,4 +1,5 @@
 import { siteUrl, path } from "./constants";
+import { newDate } from "../../../lib/schema";
 
 export default {
   "@context": "https://schema.org",
@@ -12,8 +13,8 @@ export default {
     "@id": siteUrl + "/#/schema/website",
   },
   inLanguage: "en-US",
-  datePublished: Date.now(),
-  dateModified: Date.now(),
+  datePublished: newDate(),
+  dateModified: newDate(),
   image: [
     {
       "@id": siteUrl + "/#/schema/image/logo",

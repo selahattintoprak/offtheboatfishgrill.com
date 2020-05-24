@@ -15,7 +15,7 @@ export default () => (
         </div>
         <div className="column col-md-12 col-6 col-mx-auto">
           <div className="" style={{borderRadius: "10%"}}>
-            <amp-img alt="about us" src="/static/images/main.jpg" layout="responsive" height="467" width="700" style={{borderRadius: "3%"}} />
+            <amp-img alt="about us" src="/static/images/primary.jpg" layout="responsive" height="467" width="700" style={{borderRadius: "3%"}} />
           </div>
         </div>
       </div>

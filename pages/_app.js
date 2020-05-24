@@ -25,10 +25,11 @@ export default class MyApp extends App {
       <React.Fragment>
         <Head>
           <title>My page</title>
+          <JsonLd item={schema} />
         </Head>
         <ThemeProvider theme={theme}>
           <DefaultSeo {...SEO} />
-          <JsonLd item={schema} />
+         
           {/* <LocalBusinessJsonLd {...localBussinesData} /> */}
           <Component {...pageProps} />
           <UIStyles />
