@@ -10,7 +10,7 @@ export default ({ icon: { name: iconName, side } = {}, id, placeholder, classNam
       mode="overlay"
       layout="container"
       on={`select:AMP.setState({${name}: event.date, dateType1: event.id})`}
-      format="YYYY-MM-DD"
+      format="MM-DD-YYYY"
       open-after-select=""
       input-selector={`[name=${name}]`}
       className={`example-picker space-between ${className || ""} ${

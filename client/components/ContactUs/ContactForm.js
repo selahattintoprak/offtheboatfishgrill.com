@@ -1,6 +1,6 @@
 export default ({ isLabel }) => (
   <>
-    <form className="form-group" method="post" action-xhr="https://example.com/subscribe" target="_top">
+    <form className="form-group" method="post" action-xhr="https://us-central1-nestjs-ionic-form-i.cloudfunctions.net/api/v1/forms" target="_top">
       {isLabel && (
         <label className="form-label" for="input-name">
           Name

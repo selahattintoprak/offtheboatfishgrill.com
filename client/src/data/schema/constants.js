@@ -3,14 +3,14 @@ const path = "";
 const siteName = "Cell Phone Repair Temecula";
 const orgName = "Cell Phone Repair Temecula";
 const address = {
-  streetAddress: "194  Davis Avenue",
-  addressLocality: "Oakland",
+  streetAddress: "41000 MAIN ST",
+  addressLocality: "TEMECULA",
   addressRegion: "CA",
   addressCountry: "USA",
-  postalCode: "94612",
+  postalCode: "92590",
 };
 const telephone = "+1760-452-6133";
-const email = "info@qcskinclinic.com.au";
+const email = "isquadrepair@gmail.com";
 const sameAs = [];
 
 const metaDescription = `iPhone repair, iPad repair, Samsung Galaxy repair and computer repair by ${siteName}`;

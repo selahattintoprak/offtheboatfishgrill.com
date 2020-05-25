@@ -18,8 +18,8 @@ export default () => (
     </ul>
     <form
       className="form-group"
-      method="POST"
-      action-xhr="https://us-central1-nestjs-ionic-form.cloudfunctions.net/api/v1/forms"
+      method="post"
+      action-xhr="https://us-central1-temecula.cloudfunctions.net/sendMail"
       target="_top"
     >
       <fieldset>

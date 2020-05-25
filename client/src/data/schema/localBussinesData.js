@@ -1,4 +1,5 @@
-import { siteUrl, siteName, address, telephone, email,sameAs } from "./constants";
+import { siteUrl, siteName, address, telephone, email, sameAs } from "./constants";
+import { newDate } from "../../../lib/schema";
 
 export default {
   "@context": "https://schema.org",
@@ -14,8 +15,8 @@ export default {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "40.75",
-    longitude: "73.98",
+    latitude: "33.4929479",
+    longitude: "-117.149325",
   },
   //image: [siteUrl + "/favicon.png", siteUrl + "/static/images/main-image.jpg"],
   image: {
@@ -24,9 +25,9 @@ export default {
   review: [
     {
       "@type": "Review",
-      author: "John Doe",
-      datePublished: null,
-      description: "",
+      author: "Selahattin Toprak",
+      datePublished: newDate(),
+      description: "Best iPhone repair, iPad repair, Samsung Galaxy repair and computer repair.",
       reviewRating: {
         "@type": "Rating",
         bestRating: 5,
@@ -37,8 +38,8 @@ export default {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    reviewCount: 5,
-    ratingValue: "4.2",
+    reviewCount: 1,
+    ratingValue: "5",
   },
   priceRange: "$$",
   servesCuisine: "",
