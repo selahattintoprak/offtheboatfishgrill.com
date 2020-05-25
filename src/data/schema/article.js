@@ -1,4 +1,4 @@
-import { siteUrl } from "./constants";
+import { siteUrl, siteName, metaDescription, keywords } from "./constants";
 import content from "../content";
 import { strip, newDate } from "../../../lib/schema";
 
@@ -6,10 +6,10 @@ export default {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": siteUrl + "/#/schema/article",
-  headline: "Example article headline",
-  description: "Example article description",
+  headline: siteName,
+  description: metaDescription,
   articleBody: strip(content),
-  keywords: "",
+  keywords: keywords,
   isPartOf: {
     "@id": siteUrl + "/#/schema/webpage",
   },
@@ -19,7 +19,7 @@ export default {
   datePublished: newDate(),
   dateModified: newDate(),
   commentCount: 6,
-  articleSection: "Cats,Dogs,Recipes",
+  articleSection: keywords,
   author: {
     "@id": siteUrl + "/#/schema/organization",
   },

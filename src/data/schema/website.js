@@ -1,4 +1,4 @@
-import { siteUrl, siteName } from "./constants";
+import { siteUrl, siteName, metaDescription } from "./constants";
 
 export default {
   "@context": "https://schema.org",
@@ -6,12 +6,12 @@ export default {
   "@id": siteUrl + "/#/schema/website",
   url: siteUrl,
   name: siteName,
-  description: "",
-  potentialAction: {
+  description: metaDescription,
+ /*  potentialAction: {
     "@type": "SearchAction",
     target: siteUrl + "?s={search_term_string}",
     "query-input": "required name=search_term_string",
-  },
+  }, */
   publisher: {
     "@id": siteUrl + "/#/schema/organization",
   },

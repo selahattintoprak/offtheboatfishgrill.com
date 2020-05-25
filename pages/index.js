@@ -18,7 +18,7 @@ let hCss = {
 };
 export default () => (
   <>
-    <SinglePage title="Greg's Truck Repair" description="Greg's Truck Repair">
+    <SinglePage title="Cell Phone Repair Temecula" description="Cell Phone Repair Temecula">
       <Section name="slideshow">
         <h1 className="text-center" style={{ ...hCss, fontSize: "1.75rem" }}>
           Cell Phone Repair in Temecula
@@ -35,23 +35,18 @@ export default () => (
         <div className="container">
           <div className="columns">
             <div className="column col-lg-12 col-8 col-mx-auto">
-                <h2>iPhone Repair</h2>
-                <MenuPrices id="menu-prices" menuPrices={iphoneRepairServices} />
-                <h2>iPad Repair</h2>
-                <MenuPrices id="menu-prices" menuPrices={ipadRepairervices} />
-                <h2>Samsung Repair</h2>
-                <MenuPrices id="menu-prices" menuPrices={samsungRepairServices} />
+              <h2>iPhone Repair</h2>
+              <MenuPrices id="menu-prices" menuPrices={iphoneRepairServices} />
+              <h2>iPad Repair</h2>
+              <MenuPrices id="menu-prices" menuPrices={ipadRepairervices} />
+              <h2>Samsung Repair</h2>
+              <MenuPrices id="menu-prices" menuPrices={samsungRepairServices} />
+              <amp-img alt="about us" src="/static/images/new-van-1.png" layout="responsive" height="295" width="624" />
             </div>
             <div className="column col-lg-12 col-4 col-mx-auto">
-                <h2>Book Appointment</h2>
-                <amp-img
-                  alt="about us"
-                  src="/static/images/new-van-1.png"
-                  layout="responsive"
-                  height="142"
-                  width="300"
-                />
-                <AppointmentForm />
+              <h2>Book Appointment</h2>
+
+              <AppointmentForm />
             </div>
           </div>
         </div>
@@ -100,7 +95,7 @@ const Section = ({ name, children }) => (
   <section className={`section section-${name}`}>
     <div className="container">
       <div className="columns">
-        <div className="column col-lg-12 col-8 col-mx-auto">
+        <div className="column col-lg-12 col-10 col-mx-auto">
           <div className="">{children}</div>
         </div>
       </div>

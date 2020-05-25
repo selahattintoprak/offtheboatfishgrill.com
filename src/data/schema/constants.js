@@ -1,7 +1,7 @@
-const siteUrl = "https://www.example.com";
+const siteUrl = "https://www.cellphonerepairtemecula.com";
 const path = "";
-const siteName = "Example Website";
-const orgName = "Example Organization";
+const siteName = "Cell Phone Repair Temecula";
+const orgName = "Cell Phone Repair Temecula";
 const address = {
   streetAddress: "194  Davis Avenue",
   addressLocality: "Oakland",
@@ -12,4 +12,7 @@ const address = {
 const telephone = "+1760-452-6133";
 const email = "info@qcskinclinic.com.au";
 const sameAs = [];
-export { siteUrl, path, siteName, orgName, address, telephone, email, sameAs };
+
+const metaDescription = `iPhone repair, iPad repair, Samsung Galaxy repair and computer repair by ${siteName}`;
+const keywords = "iPhone repair, iPad repair, Samsung Galaxy repair";
+export { siteUrl, path, siteName, orgName, address, telephone, email, sameAs, metaDescription, keywords };

@@ -5,7 +5,7 @@ export default {
   "@type": "ImageObject",
   "@id": siteUrl + "/#/schema/image/primary",
   url: siteUrl + "/static/images/primary.jpg",
-  caption: "Example caption",
-  width: 120,
-  height: 120,
+  caption: "iPhone repair, iPad repair, Samsung Galaxy repair and computer repair.",
+  width: 700,
+  height: 467,
 };
