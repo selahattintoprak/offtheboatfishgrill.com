@@ -27,7 +27,7 @@ export default () => (
             <div className="columns address">
               <div className="column col-12">
                 <FontAwesomeIcon size="lg" className="form-icon mr-2" icon={faMapPin} />
-                <span>3500 North 9th Street, Saint Louis, Missouri 63147, United States</span>
+                <span>41000 MAIN ST, TEMECULA, 92590</span>
               </div>
             </div>
             <div className="columns address">

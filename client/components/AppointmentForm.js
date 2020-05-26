@@ -31,11 +31,23 @@ export default () => (
           <label className="form-label" for="address">
             Address <span className="forms-req-symbol">*</span>
           </label>
-          <input className="form-input" placeholder="Enter Your Address" type="text" name="address" required />
+          <input
+            className="form-input"
+            placeholder="Enter Your Address"
+            type="text"
+            name="address"
+            data-amp-bind-required={`appointment == 'mobile' ? true : false`}
+          />
           <label className="form-label" for="zipCode">
             Zip Code <span className="forms-req-symbol">*</span>
           </label>
-          <input className="form-input" placeholder="Enter Your Zip Code" type="number" name="zipCode" required />
+          <input
+            className="form-input"
+            placeholder="Enter Your Zip Code"
+            type="number"
+            name="zipCode"
+            data-amp-bind-required={`appointment == 'mobile' ? true : false`}
+          />
         </div>
         <label className="form-label" for="email">
           Email Address <span className="forms-req-symbol">*</span>
@@ -49,7 +61,11 @@ export default () => (
           <label className="form-label" for="location">
             Location <span className="forms-req-symbol">*</span>
           </label>
-          <select className="form-select form-input" name="location" required>
+          <select
+            className="form-select form-input"
+            name="location"
+            data-amp-bind-required={`appointment == 'walkin' ? true : false`}
+          >
             <option value=" " selected="selected" disabled="true">
               Select a Location
             </option>
@@ -119,10 +135,10 @@ export default () => (
 
       <fieldset className="flex-container-center">
         <input className="form-input btn btn-primary" type="submit" value="Send" />
-        <div submit-success>
+        <div submit-success="">
           <template type="amp-mustache">Subscription successful!</template>
         </div>
-        <div submit-error>
+        <div submit-error="">
           <template type="amp-mustache">Subscription failed!</template>
         </div>
       </fieldset>
