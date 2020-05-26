@@ -15,10 +15,10 @@ module.exports = function(req, res, next) {
     "https://temecula.firebaseapp.com",
   ];
   let origin; // = req.headers.origin || req.query.__amp_source_origin || req.headers.host;
-  if (allowedOrigins.indexOf(req.headers.origin) != -1 || allowedOrigins.indexOf(req.headers.host) != -1) {
+  if (allowedOrigins.indexOf(req.headers.origin) !== -1 || allowedOrigins.indexOf(req.headers.host) !== -1) {
     // Check if the requesting CORS origin is in the allowed set.
     origin = req.headers.origin || req.headers.host;
-  } else if (req.headers["amp-same-origin"] == "true") {
+  } else if (req.headers["amp-same-origin"] === "true") {
     // Check if same origin (only a same-origin request can set a
     // custom header).
     origin = req.protocol + "://" + req.headers.host;

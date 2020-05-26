@@ -19,7 +19,7 @@ export default () => (
     <form
       className="form-group"
       method="post"
-      action-xhr="http://localhost:5001/temecula/us-central1/sendMail"
+      action-xhr="https://us-central1-temecula.cloudfunctions.net/api/v1/mail/send"
       target="_top"
     >
       <fieldset>

@@ -30,7 +30,7 @@
     "no-template-curly-in-string": 1,
 
     // Warn if return statements do not either always or never specify values
-    "consistent-return": 1,
+    "consistent-return": "off",
 
     // Warn if no return statements in callbacks of array methods
     "array-callback-return": 1,
@@ -99,7 +99,7 @@
     "no-shadow-restricted-names": 2,
 
     // Enforce return statements in callbacks of array methods
-    "callback-return": 2,
+    "callback-return": "off",
 
     // Require error handling in callbacks
     "handle-callback-err": 2,
@@ -108,7 +108,7 @@
     "no-path-concat": 1,
 
     // Prefer using arrow functions for callbacks
-    "prefer-arrow-callback": 1,
+    "prefer-arrow-callback": "off",
 
     // Return inside each then() to create readable and reusable Promise chains.
     // Forces developers to return console logs and http calls in promises. 
