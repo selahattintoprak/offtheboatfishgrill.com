@@ -4,11 +4,11 @@ const LoginForm = () => (
   <div className="content">
     <form method="post" action-xhr="https://example.com/subscribe" target="_top">
       <div className="form-group">
-        <label className="form-label" for="input-login-name">
+        <label className="form-label" htmlFor="input-login-name">
           Email
         </label>
         <input className="form-input" id="input-login-name" type="email" placeholder="Email" />
-        <label className="form-label" for="input-login-password">
+        <label className="form-label" htmlFor="input-login-password">
           Password
         </label>
         <input className="form-input" id="input-login-password" type="text" placeholder="Password" />

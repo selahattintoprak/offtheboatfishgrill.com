@@ -23,12 +23,12 @@ export default () => (
       target="_top"
     >
       <fieldset>
-        <label className="form-label" for="name">
+        <label className="form-label" htmlFor="name">
           Name <span className="forms-req-symbol">*</span>
         </label>
         <input className="form-input" placeholder="Enter Your Name" type="text" name="name" required />
         <div data-amp-bind-hidden={`appointment != 'mobile'`}>
-          <label className="form-label" for="address">
+          <label className="form-label" htmlFor="address">
             Address <span className="forms-req-symbol">*</span>
           </label>
           <input
@@ -38,7 +38,7 @@ export default () => (
             name="address"
             data-amp-bind-required={`appointment == 'mobile' ? true : false`}
           />
-          <label className="form-label" for="zipCode">
+          <label className="form-label" htmlFor="zipCode">
             Zip Code <span className="forms-req-symbol">*</span>
           </label>
           <input
@@ -49,16 +49,16 @@ export default () => (
             data-amp-bind-required={`appointment == 'mobile' ? true : false`}
           />
         </div>
-        <label className="form-label" for="email">
+        <label className="form-label" htmlFor="email">
           Email Address <span className="forms-req-symbol">*</span>
         </label>
         <input className="form-input" placeholder="Enter Your Email Address" type="email" name="email" required />
-        <label className="form-label" for="phone">
+        <label className="form-label" htmlFor="phone">
           Phone Number <span className="forms-req-symbol">*</span>
         </label>
         <input className="form-input" placeholder="Enter Your Phone Number" type="text" name="phone" required />
         <div data-amp-bind-hidden={`appointment == 'mobile'`}>
-          <label className="form-label" for="location">
+          <label className="form-label" htmlFor="location">
             Location <span className="forms-req-symbol">*</span>
           </label>
           <select
@@ -66,7 +66,7 @@ export default () => (
             name="location"
             data-amp-bind-required={`appointment == 'walkin' ? true : false`}
           >
-            <option value=" " selected="selected" disabled="true">
+            <option value=" " selected="selected" disabled={true}>
               Select a Location
             </option>
             <option value="Santee">Santee</option>
@@ -78,7 +78,7 @@ export default () => (
             <option value="Mobile Service">Mobile Service</option>
           </select>
         </div>
-        <label className="form-label" for="date">
+        <label className="form-label" htmlFor="date">
           Date <span className="forms-req-symbol">*</span>
         </label>
         {/* <input className="form-input" name="date" type="date" value="" /> */}
@@ -88,11 +88,11 @@ export default () => (
           icon={{ name: faCalendarAlt, side: "left" }}
           placeholder="Pick a move date"
         />
-        <label className="form-label" for="time">
+        <label className="form-label" htmlFor="time">
           Time <span className="forms-req-symbol">*</span>
         </label>
         <select className="form-select form-input" name="time" required>
-          <option value=" " selected="selected" disabled="true">
+          <option value=" " selected="selected" disabled={true}>
             Select Time
           </option>
           <option value="09:00">9:00 AM</option>
@@ -116,18 +116,18 @@ export default () => (
           <option value="18:00">6:00 PM</option>
           <option value="18:30">6:30 PM</option>
         </select>
-        <label className="form-label" for="deviceType">
+        <label className="form-label" htmlFor="deviceType">
           Type of Device <span className="forms-req-symbol">*</span>
         </label>
         <select className="form-select form-input" name="deviceType" required>
-          <option value=" " selected="selected" disabled="true">
+          <option value=" " selected="selected" disabled={true}>
             Select Type of Device for Repair
           </option>
           <option value="iphone">iPhone</option>
           <option value="ipad">iPad</option>
           <option value="samsung-galaxy-phone">Samsung Galaxy Phone</option>
         </select>
-        <label className="form-label" for="message">
+        <label className="form-label" htmlFor="message">
           Message <span className="forms-req-symbol">*</span>
         </label>
         <textarea className="form-input" name="message" cols="30" rows="3"></textarea>
