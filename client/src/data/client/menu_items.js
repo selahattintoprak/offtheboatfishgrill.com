@@ -1,36 +1,40 @@
-export const menuItems = [];
-/* [
-  { title: "About Us", link: "/about-us" },
-  { title: "How It works", link: "/how-it-works" },
-  { title: "FAQ", link: "/faq" },
+export const menuItems = [
+  { title: "Home", link: "/" },
   {
-    title: "Services",
-    link: "/moving-services",
-    back: "Services",
+    title: "Menu",
+    link: "#menu",
+    back: "Menu",
     columns: [
       {
-        divider: "MOVING",
+        divider: null,
         items: [
-          { title: "Moving Services", link: "/moving-services" },
-          { title: "Local Moving", link: "/moving-local" },
-          { title: "Interstate Moving", link: "/moving-long" },
-          { title: "International Moving", link: "/moving-international" },
-          { title: "Moving Truck Rental", link: "/moving-truck-rental" },
-          { title: "Moving Furniture", link: "/furniture-moving" },
-          { title: "Professional Movers", link: "/professional-movers" },
-          { title: "House Movers", link: "/house-movers" }
-        ]
+          { title: "Appetizers", link: "/#appetizers" },
+          { title: "Salads", link: "#salads" },
+          { title: "Plates", link: "#plates" },
+          { title: "Soups", link: "#soups" },
+          { title: "Sliders", link: "#sliders" },
+          { title: "Tacos", link: "#tacos" },
+          { title: "Pita Wraps", link: "#pita-wraps" },
+          { title: "Baja Bowls", link: "#baja-bowls" },
+          { title: "Family Platters", link: "#family-platters" },
+          { title: "Proteins (a la carte)", link: "#proteins" },
+          { title: "Kids Menu", link: "#kids-menu" },
+          { title: "Sides", link: "#sides" },
+          { title: "Deserts", link: "#deserts" },
+        ],
       },
-      {
+      /*    {
         divider: "Storage",
         items: [
           { title: "Storage Services", link: "/storage-services" },
           { title: "Self Storage", link: "/storage-self" },
           { title: "Warehouse", link: "/storage-warehouse" },
-          { title: "Moving Insurance", link: "/moving-insurance", divider: "Insurance" }
-        ]
-      }
-    ]
+          { title: "Moving Insurance", link: "/moving-insurance", divider: "Insurance" },
+        ],
+      }, */
+    ],
   },
-  { title: "Contact", link: "/#" }
-]; */
+  { title: "Catering", link: "#catering" },
+  { title: "Weekly Specials", link: "#weekly-specials" },
+  { title: "Locations", link: "#locations" },
+];
