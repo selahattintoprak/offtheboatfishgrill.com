@@ -1,0 +1,145 @@
+export default {
+  "@type": "MenuSection",
+  name: "Proteins A La Carte",
+  description: "",
+  //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+  offers: {
+    "@type": "Offer",
+    availabilityEnds: "T8:21:00",
+    availabilityStarts: "T8:21:00",
+  },
+  hasMenuItem: [
+    {
+      "@type": "MenuItem",
+      name: "Chicken Kabob",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "5.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Filet Mignon Kabob",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "8.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Ground Sirloin Kabob",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "3.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Lamb Gyro",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "5.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Carnitas",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "6.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Mahi-Mahi",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "7.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Wild Salmon",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "7.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Cod",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "5.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Ahi Tuna",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "8.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Shrimp (3pc)",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "8.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Barramundi",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "7.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+  ],
+};

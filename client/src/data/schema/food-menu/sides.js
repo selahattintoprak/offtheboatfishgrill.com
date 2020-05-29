@@ -1,0 +1,167 @@
+export default {
+  "@type": "MenuSection",
+  name: "",
+  description: "",
+  //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+  offers: {
+    "@type": "Offer",
+    availabilityEnds: "T8:21:00",
+    availabilityStarts: "T8:21:00",
+  },
+  hasMenuItem: [
+    {
+      "@type": "MenuItem",
+      name: "Rice",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "1.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Beans",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "1.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Seasoned Fries",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "3.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Fire Roasted Corn",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "3.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Grilled Vegies",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "3.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Sauteed Mushrooms",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "3.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Grilled Pita (1 pc)",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "0.75",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Tortillas (3 pc)",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "1.25",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Hummus (3 oz)",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "1.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Tzatziki (3 oz)",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "1.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Garlic Sauce (3 oz)",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "1.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Organic Cauliflower Rice",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "3.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Grilled Whole Tomato",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "1.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+    {
+      "@type": "MenuItem",
+      name: "Grilled Jalapeno",
+      description: "",
+      offers: {
+        "@type": "Offer",
+        price: "0.95",
+        priceCurrency: "USD",
+      },
+      // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+    },
+  ],
+};

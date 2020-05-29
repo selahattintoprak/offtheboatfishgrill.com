@@ -1,10 +1,13 @@
 export default [
   {
-    title: "Garage Labor Rates",
-    description: "Worked performed on site",
+    title: "APPETIZERS",
+    description: null,
     items: [
-      { title: "All Classes of Trucks, Trailers", description: "", price: "$115/hr" },
-      { title: "Buses and RVs", description: "", price: "$135/hr" },
+      { title: "CHIPS & SALSA", description: null, price: "$3.95" },
+      { title: "CHIPS & GUAC (6 oz)", description: null, price: "$6.95" },
+      { title: "", description: null, price: "" },
+      { title: "", description: null, price: "" },
+
     ],
     footer:
       "Additional charges for those using third party maintenance vendors such as ARI, Element, GE Capital, ect..",

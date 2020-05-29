@@ -1,18 +1,20 @@
 const siteUrl = "https://www.cellphonerepairtemecula.com";
 const path = "";
-const siteName = "Cell Phone Repair Temecula";
-const orgName = "Cell Phone Repair Temecula";
+const siteName = "Off The Boat Fish Grill";
+const orgName = "Off The Boat Fish Grill";
 const address = {
-  streetAddress: "41000 MAIN ST",
-  addressLocality: "TEMECULA",
+  streetAddress: "17582 17th street, Suite 105",
+  addressLocality: "Tustin",
   addressRegion: "CA",
   addressCountry: "USA",
-  postalCode: "92590",
+  postalCode: "92780",
 };
-const telephone = "+1760-452-6133";
+const telephone = "+1714-544-1900";
 const email = "isquadrepair@gmail.com";
 const sameAs = [];
 
-const metaDescription = `iPhone repair, iPad repair, Samsung Galaxy repair and computer repair by ${siteName}`;
-const keywords = "iPhone repair, iPad repair, Samsung Galaxy repair";
+const metaDescription =
+  "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Tustin serving delicious seafood and Mediterreanean dishes";
+const keywords =
+  "CA, Fish Tacos, Fish and chips, Gyro, Kabob, Kebab, Lentil Soup, Lobster, Off The Boat Fish Grill, Orange County, Restaurant, Seafood, Taco, Tustin, healthy restaurant";
 export { siteUrl, path, siteName, orgName, address, telephone, email, sameAs, metaDescription, keywords };

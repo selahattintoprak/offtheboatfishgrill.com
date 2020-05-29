@@ -1,7 +1,7 @@
 import Quotes from "../components/Quotes/Quotes";
 import SinglePage from "../components/SinglePage/SinglePage";
 import MenuPrices from "../components/MenuPrices/MenuPrices";
-import iphoneRepairServices from "../src/data/client/iphone_repair_services";
+import menuPrices from "../src/data/client/menu_prices";
 import ipadRepairervices from "../src/data/client/ipad_repair_services";
 import samsungRepairServices from "../src/data/client/samsung_repair_services";
 import AboutUs from "../components/AboutUs/AboutUs";
@@ -36,7 +36,7 @@ export default () => (
           <div className="columns">
             <div className="column col-lg-12 col-8 col-mx-auto">
               <h2>iPhone Repair</h2>
-              <MenuPrices id="menu-prices" menuPrices={iphoneRepairServices} />
+              <MenuPrices id="menu-prices" menuPrices={menuPrices} />
               <h2>iPad Repair</h2>
               <MenuPrices id="menu-prices" menuPrices={ipadRepairervices} />
               <h2>Samsung Repair</h2>
