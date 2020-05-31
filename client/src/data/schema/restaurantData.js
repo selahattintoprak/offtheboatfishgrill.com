@@ -1,17 +1,44 @@
-import { siteUrl, siteName, address, telephone, email, sameAs } from "./constants";
+import {
+  siteUrl,
+  siteName,
+  telephoneTustin,
+  telephonePlacentia,
+  emailTustin,
+  emailPlacentia,
+  sameAsTustin,
+  sameAsPlacentia,
+  metaDescriptionTustin,
+  metaDescriptionPlacentia,
+} from "./constants";
 import { newDate } from "../../../lib/schema";
 
-export default {
+const common = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  "@id": siteUrl,
-  name: siteName,
-  description: "",
+  priceRange: "$$",
+  hasMenu: siteUrl + "/#/schema/menu",
+  servesCuisine: ["Seafood", "Middle Eastern", "Mediterranean"],
+  areaServed: ["Tustin"],
+  //openingHours: ["Mo-Fr 09:00-19:00", "Sa 10:00-19:00"],
+  OpeningHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "11:00",
+      closes: "21:00",
+    },
+  ],
+};
+const tustin = {
+  ...common,
+  "@id": siteUrl + "/#/schema/restaurant/tustin",
+  name: siteName + " Tustin",
+  description: metaDescriptionTustin,
   url: siteUrl,
-  telephone,
-  email,
+  telephone: telephoneTustin,
+  email: emailTustin,
   address: {
-    "@id": siteUrl + "/#/schema/address",
+    "@id": siteUrl + "/#/schema/address/tustin",
   },
   geo: {
     "@type": "GeoCoordinates",
@@ -45,19 +72,54 @@ export default {
     reviewCount: 1,
     ratingValue: "5",
   },
-  priceRange: "$$",
-  hasMenu: siteUrl + "/#/schema/menu",
-  servesCuisine: ["Seafood", "Middle Eastern", "Mediterranean"],
-  areaServed: ["Tustin"],
-  sameAs,
+  sameAs: sameAsTustin,
   hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
-  //openingHours: ["Mo-Fr 09:00-19:00", "Sa 10:00-19:00"],
-  OpeningHoursSpecification: [
+};
+
+const placentia = {
+  ...common,
+  "@id": siteUrl + "/#/schema/restaurant/tustin",
+  name: siteName + " Tustin",
+  description: metaDescriptionPlacentia,
+  url: siteUrl,
+  telephone: telephonePlacentia,
+  email: emailPlacentia,
+  address: {
+    "@id": siteUrl + "/#/schema/address/placentia",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "33.885910",
+    longitude: "-117.863310",
+  },
+  //image: [siteUrl + "/favicon.png", siteUrl + "/static/images/main-image.jpg"],
+  image: {
+    "@id": siteUrl + "/#/schema/image/primary",
+  },
+  logo: {
+    "@id": siteUrl + "/#/schema/image/logo",
+  },
+  review: [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "11:00",
-      closes: "21:00",
+      "@type": "Review",
+      author: "Selahattin Toprak",
+      datePublished: newDate(),
+      description:
+        "Best Fish Tacos, Fish and chips, Gyro, Kabob, Kebab, Lentil Soup, Lobster, Off The Boat Fish Grill, Orange County, Restaurant, Seafood and Taco to be found in Tustin",
+      reviewRating: {
+        "@type": "Rating",
+        bestRating: 5,
+        ratingValue: "5",
+        worstRating: 1,
+      },
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    reviewCount: 1,
+    ratingValue: "5",
+  },
+  sameAs: sameAsPlacentia,
+  hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
 };
+export default [tustin, placentia];
