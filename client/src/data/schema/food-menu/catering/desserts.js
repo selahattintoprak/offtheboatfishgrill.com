@@ -1,4 +1,4 @@
-import { siteUrl } from "../constants";
+import { siteUrl } from "../../constants";
 
 export default {
   "@context": "http://schema.org",

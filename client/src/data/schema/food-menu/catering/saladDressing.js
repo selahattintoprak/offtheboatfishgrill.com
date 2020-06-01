@@ -1,6 +1,6 @@
-import { siteUrl } from "../constants";
+import { siteUrl } from "../../constants";
 
-const saladDressing = {
+export default {
   "@context": "http://schema.org",
   "@type": "MenuItem",
   "@id": siteUrl + "/#/schema/menu-item-addon/salad-dressing",

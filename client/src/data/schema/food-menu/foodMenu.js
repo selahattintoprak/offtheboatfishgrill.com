@@ -1,7 +1,7 @@
 import menu from "./menu";
 import appetizers from "./appetizers";
 import bahaBowls from "./bahaBowls";
-import catering from "./catering";
+import catering from "./catering/cateringMenu";
 import deserts from "./deserts";
 import familyPlatters from "./familyPlatters";
 import happyHour from "./happyHour";
@@ -18,6 +18,8 @@ import soups from "./soups";
 import tacoTuesday from "./tacoTuesday";
 import weeklySpecials from "./weeklySpecials";
 export default [
+  menu,
+  catering,
   appetizers,
   bahaBowls,
   catering,
@@ -36,5 +38,4 @@ export default [
   soups,
   tacoTuesday,
   weeklySpecials,
-  menu,
 ];
