@@ -11,7 +11,7 @@ export const address = {
 };
 export const telephone = "+1714-544-1900";
 export const email = "info@offtheboatfishgrill.com";
-export const sameAs = [...sameAsTustin, ...sameAsPlacentia];
+
 
 export const metaDescription =
   "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Tustin serving delicious seafood and Mediterreanean dishes";
@@ -57,3 +57,7 @@ export const sameAsPlacentia = [
 
 export const metaDescriptionPlacentia =
   "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Placentia serving delicious seafood and Mediterreanean dishes";
+
+
+// Common
+export const sameAs = [...sameAsTustin, ...sameAsPlacentia];

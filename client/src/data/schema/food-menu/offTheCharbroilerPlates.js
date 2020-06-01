@@ -1,8 +1,12 @@
+import { siteUrl } from "../constants";
+
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/off-the-charbroiler-plates",
   name: "Off The Charbroiler - Plates",
   description: "Served on basmati rice with veggies & salad. (Sub rice for organic cauliflower rice 75¢)",
-  //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+  // image: "https://thisisarestaurant.com/starter_dishes.jpg",
   offers: {
     "@type": "Offer",
     availabilityEnds: "T8:21:00",
@@ -13,7 +17,7 @@ export default {
       "@type": "MenuSection",
       name: "Fish (Topped with Pico De Gallo)",
       description: "",
-      //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       offers: {
         "@type": "Offer",
         availabilityEnds: "T8:21:00",
@@ -29,6 +33,7 @@ export default {
             price: "9.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -40,6 +45,7 @@ export default {
             price: "10.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -51,6 +57,7 @@ export default {
             price: "11.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -62,6 +69,7 @@ export default {
             price: "11.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {

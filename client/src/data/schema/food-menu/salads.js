@@ -1,5 +1,9 @@
+import { siteUrl } from "../constants";
+
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/salads",
   name: "Salads",
   description:
     "Mixed greens, tomatoes, cucumbers, red onions, fire roasted corn.Dressing choices: Lemon Oregano, Balsamic, Soy Ginger, Ranch. (Add avocado or guac for 95¢)",
@@ -14,7 +18,7 @@ export default {
       "@type": "MenuSection",
       name: "Fish",
       description: "Topped with Pice De Gallo",
-      //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       offers: {
         "@type": "Offer",
         availabilityEnds: "T8:21:00",
@@ -30,6 +34,7 @@ export default {
             price: "8.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -41,6 +46,7 @@ export default {
             price: "9.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -52,6 +58,7 @@ export default {
             price: "10.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -63,6 +70,7 @@ export default {
             price: "10.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -74,6 +82,7 @@ export default {
             price: "10.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -85,6 +94,7 @@ export default {
             price: "13.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -96,6 +106,7 @@ export default {
             price: "12.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -107,6 +118,7 @@ export default {
             price: "13.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
       ],
@@ -115,7 +127,7 @@ export default {
       "@type": "MenuSection",
       name: "Meats",
       description: "",
-      //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       offers: {
         "@type": "Offer",
         availabilityEnds: "T8:21:00",
@@ -131,6 +143,7 @@ export default {
             price: "8.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -142,6 +155,7 @@ export default {
             price: "9.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -153,6 +167,7 @@ export default {
             price: "10.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -164,6 +179,7 @@ export default {
             price: "12.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -175,6 +191,7 @@ export default {
             price: "4.55",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -186,6 +203,7 @@ export default {
             price: "7.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -197,6 +215,7 @@ export default {
             price: "8.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -208,6 +227,7 @@ export default {
             price: "8.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -219,6 +239,7 @@ export default {
             price: "9.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
       ],
@@ -227,7 +248,7 @@ export default {
       "@type": "MenuSection",
       name: "Vegetarian",
       description: "",
-      //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       offers: {
         "@type": "Offer",
         availabilityEnds: "T8:21:00",
@@ -243,6 +264,7 @@ export default {
             price: "4.55",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -254,6 +276,7 @@ export default {
             price: "7.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -265,6 +288,7 @@ export default {
             price: "8.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -276,6 +300,7 @@ export default {
             price: "8.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
         {
@@ -287,6 +312,7 @@ export default {
             price: "9.95",
             priceCurrency: "USD",
           },
+          // image: "https://thisisarestaurant.com/starter_dishes.jpg",
           // suitableForDiet: "http://schema.org/GlutenFreeDiet",
         },
       ],

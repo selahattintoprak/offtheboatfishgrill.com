@@ -18,7 +18,6 @@ const common = {
   priceRange: "$$",
   hasMenu: siteUrl + "/#/schema/menu",
   servesCuisine: ["Seafood", "Middle Eastern", "Mediterranean"],
-  areaServed: ["Tustin"],
   //openingHours: ["Mo-Fr 09:00-19:00", "Sa 10:00-19:00"],
   OpeningHoursSpecification: [
     {
@@ -74,12 +73,14 @@ const tustin = {
   },
   sameAs: sameAsTustin,
   hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
+  areaServed: ["Tustin"],
+  hasMenu: { "@id": siteUrl + "/#/schema/menu" },
 };
 
 const placentia = {
   ...common,
-  "@id": siteUrl + "/#/schema/restaurant/tustin",
-  name: siteName + " Tustin",
+  "@id": siteUrl + "/#/schema/restaurant/placentia",
+  name: siteName + "Placentia",
   description: metaDescriptionPlacentia,
   url: siteUrl,
   telephone: telephonePlacentia,
@@ -121,5 +122,7 @@ const placentia = {
   },
   sameAs: sameAsPlacentia,
   hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
+  areaServed: ["Placentia"],
+  hasMenu: { "@id": siteUrl + "/#/schema/menu" },
 };
 export default [tustin, placentia];

@@ -15,10 +15,4 @@ export default {
     "@id": siteUrl + "/#/schema/image/primary",
   },
   sameAs,
-  department: [
-    {
-      "@id": siteUrl + "/#/schema/restaurant/tustin",
-    },
-    { "@id": siteUrl + "/#/schema/restaurant/placentia" },
-  ],
 };

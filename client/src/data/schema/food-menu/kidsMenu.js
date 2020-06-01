@@ -1,5 +1,9 @@
+import { siteUrl } from "../constants";
+
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/kids-menu",
   name: "Kids Menu",
   description: "(Under 12 yrs) Pick any protein a la carte with 1 side: Fries, rice, veggies or pita",
   //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
@@ -18,6 +22,7 @@ export default {
         price: "4.95",
         priceCurrency: "USD",
       },
+      //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
     {
@@ -29,6 +34,7 @@ export default {
         price: "5.95",
         priceCurrency: "USD",
       },
+      //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
   ],

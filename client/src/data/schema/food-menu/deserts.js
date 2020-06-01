@@ -1,5 +1,9 @@
+import { siteUrl } from "../constants";
+
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/desserts",
   name: "Desserts",
   description: "",
   //   image: "https://thisisarestaurant.com/starter_dishes.jpg",

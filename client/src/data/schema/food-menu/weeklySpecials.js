@@ -1,8 +1,12 @@
+import { siteUrl } from "../constants";
+
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/weekly-specials",
   name: "Weekly Specials",
   description: "",
-  //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+  // image: "https://thisisarestaurant.com/starter_dishes.jpg",
   offers: {
     "@type": "Offer",
     availabilityEnds: "T8:18:00",
@@ -28,6 +32,7 @@ export default {
           priceCurrency: "USD",
         },
       ],
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
     {
@@ -39,6 +44,7 @@ export default {
         price: "9.95",
         priceCurrency: "USD",
       },
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
     {
@@ -50,6 +56,7 @@ export default {
         price: "11.95",
         priceCurrency: "USD",
       },
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
     {
@@ -61,6 +68,7 @@ export default {
         price: "9.95",
         priceCurrency: "USD",
       },
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
   ],

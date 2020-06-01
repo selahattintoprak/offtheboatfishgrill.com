@@ -1,8 +1,12 @@
+import { siteUrl } from "../constants";
+
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/taco-tuesday",
   name: "Taco Tuesday",
   description: "Dine in only.",
-  //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+  // image: "https://thisisarestaurant.com/starter_dishes.jpg",
   offers: {
     "@type": "Offer",
     availabilityEnds: "T8:18:00",
@@ -19,6 +23,7 @@ export default {
         price: "2.95",
         priceCurrency: "USD",
       },
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
   ],

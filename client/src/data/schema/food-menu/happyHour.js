@@ -1,8 +1,12 @@
+import { siteUrl } from "../constants";
+
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/happy-hour",
   name: "Happy Hour",
   description: "3pm-6pm Dine in only.",
-  //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
+  // image: "https://thisisarestaurant.com/starter_dishes.jpg",
   offers: {
     "@type": "Offer",
     availabilityEnds: "T8:15:00",
@@ -33,6 +37,7 @@ export default {
           },
         },
       ],
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
     {
@@ -59,6 +64,7 @@ export default {
           },
         },
       ],
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
     {
@@ -85,6 +91,7 @@ export default {
           },
         },
       ],
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
     {
@@ -96,6 +103,7 @@ export default {
         price: "5.00",
         priceCurrency: "USD",
       },
+      // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
   ],

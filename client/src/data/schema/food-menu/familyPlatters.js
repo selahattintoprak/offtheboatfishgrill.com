@@ -1,5 +1,9 @@
+import { siteUrl } from "../constants";
+
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/family-platters",
   name: "Family Platters",
   description: "Great for sharing! Serves 3 - 4 For catering information, please contact us at (714) 544-1900",
   //   image: "https://thisisarestaurant.com/starter_dishes.jpg",

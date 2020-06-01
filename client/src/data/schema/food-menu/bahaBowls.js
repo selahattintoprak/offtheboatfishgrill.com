@@ -1,5 +1,8 @@
+import { siteUrl } from "../constants";
 export default {
+  "@context": "http://schema.org",
   "@type": "MenuSection",
+  "@id": siteUrl + "/#/schema/menu-section/baha-bowls",
   name: "Baja Bowls",
   description:
     "Served with basmati rice, lettuce (cabbage for fish items), jack cheese, pinto beans & pico de gallo. (Sub rice for organic cauliflower rice 75¢ / Add avocado or guac 95¢)",

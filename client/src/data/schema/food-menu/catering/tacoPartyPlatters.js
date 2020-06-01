@@ -3,10 +3,10 @@ import { siteUrl } from "../constants";
 export default {
   "@context": "http://schema.org",
   "@type": "MenuSection",
-  "@id": siteUrl + "/#/schema/menu-section/soups",
-  name: "Soups",
-  description: "",
-  // image: "https://thisisarestaurant.com/starter_dishes.jpg",
+  name: "Taco Party Platters",
+  description:
+    "Includes 2 tacos per person, chips & salsa, pinto beans and salad. Tacos served on corn tortillas with lettuce (cabbage for fish items), jack cheese and pico de gallo",
+  //   image: "https://thisisarestaurant.com/starter_dishes.jpg",
   offers: {
     "@type": "Offer",
     availabilityEnds: "T8:21:00",
@@ -15,57 +15,44 @@ export default {
   hasMenuItem: [
     {
       "@type": "MenuItem",
-      name: "Cajun Fish Tortilla Soup",
-      description: "Cod, salmon, mahi-mahi and vegetables",
+      name: "Taco Pack",
+      description: "",
       offers: [
         {
           "@type": "Offer",
-          price: "3.95",
+          price: "10.25",
           priceCurrency: "USD",
           eligibleQuantity: {
             "@type": "QuantitativeValue",
-            name: "Cup",
-          },
-        },
-        {
-          "@type": "Offer",
-          price: "6.95",
-          priceCurrency: "USD",
-          eligibleQuantity: {
-            "@type": "QuantitativeValue",
-            name: "Bowl",
+            name: "Per Person",
           },
         },
       ],
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+      menuAddon: [
+        { "@id": siteUrl + "/#/schema/menu-item-addon/salad-dressing" },
+        { "@id": siteUrl + "/#/schema/menu-item-addon/taco-pack-protein" },
+      ],
     },
     {
       "@type": "MenuItem",
-      name: "Lentil (Vegetarian)",
-      description: "Lentils cooked in vegetable broth",
+      name: "Fiesta Taco Pack",
+      description: "",
       offers: [
         {
           "@type": "Offer",
-          price: "2.95",
+          price: "13.95",
           priceCurrency: "USD",
           eligibleQuantity: {
             "@type": "QuantitativeValue",
-            name: "Cup",
-          },
-        },
-        {
-          "@type": "Offer",
-          price: "5.95",
-          priceCurrency: "USD",
-          eligibleQuantity: {
-            "@type": "QuantitativeValue",
-            name: "Bowl",
+            name: "Per Person",
           },
         },
       ],
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
+      menuAddon: [{ "@id": siteUrl + "/#/schema/menu-item-addon/taco-pack-protein" }],
     },
   ],
 };
