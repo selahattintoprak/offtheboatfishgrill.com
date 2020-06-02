@@ -74,7 +74,7 @@ const tustin = {
   sameAs: sameAsTustin,
   hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
   areaServed: ["Tustin"],
-  hasMenu: { "@id": siteUrl + "/#/schema/menu" },
+  hasMenu: [{ "@id": siteUrl + "/#/schema/menu" }, { "@id": siteUrl + "/#/schema/menu/catering" }],
 };
 
 const placentia = {
@@ -123,6 +123,6 @@ const placentia = {
   sameAs: sameAsPlacentia,
   hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
   areaServed: ["Placentia"],
-  hasMenu: { "@id": siteUrl + "/#/schema/menu" },
+  hasMenu: [{ "@id": siteUrl + "/#/schema/menu" }, { "@id": siteUrl + "/#/schema/menu/catering" }],
 };
 export default [tustin, placentia];

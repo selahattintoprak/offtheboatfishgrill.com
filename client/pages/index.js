@@ -1,6 +1,7 @@
 import Quotes from "../components/Quotes/Quotes";
 import SinglePage from "../components/SinglePage/SinglePage";
 import MenuPrices from "../components/MenuPrices/MenuPrices";
+import { HasMenu } from "../components/MenuPrices/MenuPricesSchema";
 import menuPrices from "../src/data/client/menu_prices";
 import ipadRepairervices from "../src/data/client/ipad_repair_services";
 import samsungRepairServices from "../src/data/client/samsung_repair_services";
@@ -8,7 +9,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import ContactUs from "../components/ContactUs/ContactUs";
 import Content from "../src/data/content";
 import AppointmentForm from "../components/AppointmentForm";
-export const config = { amp: true };
+export const config = { amp: "hybrid" };
 
 let hCss = {
   fontWeight: "bold",
@@ -35,6 +36,8 @@ export default () => (
         <div className="container">
           <div className="columns">
             <div className="column col-lg-12 col-8 col-mx-auto">
+              <h2>Food Menu</h2>
+              <HasMenu>this is HasMenu</HasMenu>
               <h2>iPhone Repair</h2>
               <MenuPrices id="menu-prices" menuPrices={menuPrices} />
               <h2>iPad Repair</h2>

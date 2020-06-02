@@ -9,7 +9,7 @@ import person from "./person";
 import logoImage from "./logoImage";
 import slideshowImage from "./slideshowImage";
 import pirmaryImage from "./pirmaryImage";
-import foodMenu from "./food-menu/foodMenu";
+import menu from "./menu/menu";
 import restaurantData from "./restaurantData";
 export default [
   website,
@@ -18,8 +18,8 @@ export default [
   organization,
   //localBussinesData,
   ...restaurantData,
-  ...foodMenu,
-  postalAddress,
+  ...menu,
+  ...postalAddress,
   logoImage,
   slideshowImage,
   pirmaryImage,
