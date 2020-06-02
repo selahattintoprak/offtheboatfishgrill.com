@@ -2,8 +2,8 @@ import { siteUrl } from "../../constants";
 
 export default {
   "@context": "http://schema.org",
-  "@type": "MenuSection",
-  "@id": siteUrl + "/#/schema/menu-section/food/taco-tuesday",
+  "@type": "Menu",
+  "@id": siteUrl + "/#/schema/menu/taco-tuesday",
   name: "Taco Tuesday",
   description: "Dine in only.",
   // image: "https://thisisarestaurant.com/starter_dishes.jpg",

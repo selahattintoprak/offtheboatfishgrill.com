@@ -1,4 +1,4 @@
-import food from "./food/food";
-import catering from "./catering/catering";
-
-export default [...food, ...catering];
+import food from "./food";
+import catering from "./catering";
+import specials from "./specials";
+export default [...food, ...catering, ...specials];

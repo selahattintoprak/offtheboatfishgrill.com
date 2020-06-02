@@ -123,6 +123,11 @@ const placentia = {
   sameAs: sameAsPlacentia,
   hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
   areaServed: ["Placentia"],
-  hasMenu: [{ "@id": siteUrl + "/#/schema/menu" }, { "@id": siteUrl + "/#/schema/menu/catering" }],
+  hasMenu: [
+    { "@id": siteUrl + "/#/schema/menu" },
+    { "@id": siteUrl + "/#/schema/menu/catering" },
+    { "@id": siteUrl + "/#/schema/menu/weekly-specials" },
+    { "@id": siteUrl + "/#/schema/menu/taco-tuesday" },
+  ],
 };
 export default [tustin, placentia];

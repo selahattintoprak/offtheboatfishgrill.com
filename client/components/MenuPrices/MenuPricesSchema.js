@@ -5,44 +5,46 @@ export const HasMenu = ({ children }) => {
 
   return (
     <>
-      {menu.map(({ name, description, hasMenuItem = [], hasMenuSection = [] }) => {
-        const items = hasMenuItem.map(({ name, description, offers: { price } }) => ({
-          title: name,
-          description,
-          price,
-        }));
-        let menuPrices = [
-          {
+      {menu
+        .filter(({ "@type": type }) => type == "Menu")
+        .map(({ "@type": type, name, description, hasMenuItem = [], hasMenuSection = [] }) => {
+          const items = hasMenuItem.map(({ name, description, offers: { price } }) => ({
             title: name,
             description,
-            items,
-            footer: "",
-          },
-        ];
-        let menuSection = [];
-        if (Array.isArray(hasMenuSection)) {
-          menuSection = hasMenuSection.map(({ "@id": hasMenuSectionId, "@type": hasMenuSectionType }) => {
-            return (
-              hasMenuSectionId &&
-              !hasMenuSectionType &&
-              menu.find(({ "@id": menuSectionId, "@type": menuSectionType }) => menuSectionId == hasMenuSectionId)
-            );
-          });
-          console.log("isArray menusection", menuSection);
-        } else {
-          const { "@id": hasMenuSectionId, "@type": hasMenuSectionType } = hasMenuSection;
-          if (hasMenuSectionId && !hasMenuSectionType) {
-            menuSection = {
-              ...menu.find(({ "@id": menuId }) => menuId == menuSectionId),
-            };
+            price,
+          }));
+          let menuPrices = [
+            {
+              title: name,
+              description,
+              items,
+              footer: "",
+            },
+          ];
+          let menuSection = [];
+          if (Array.isArray(hasMenuSection) && hasMenuSection.length > 0) {
+            menuSection = hasMenuSection.map(({ "@id": hasMenuSectionId, "@type": hasMenuSectionType }) => {
+              return (
+                hasMenuSectionId &&
+                !hasMenuSectionType &&
+                menu.find(({ "@id": menuSectionId, "@type": menuSectionType }) => menuSectionId == hasMenuSectionId)
+              );
+            });
+            console.log("isArray menusection", menuSection);
           } else {
-            menuSection = hasMenuSection;
+            const { "@id": hasMenuSectionId, "@type": hasMenuSectionType } = hasMenuSection;
+            if (hasMenuSectionId && !hasMenuSectionType) {
+              menuSection = {
+                ...menu.find(({ "@id": menuId }) => menuId == menuSectionId),
+              };
+            } else {
+              menuSection = hasMenuSection;
+            }
           }
-        }
-        if(menuSection){
-          console.log("menusectoin", menuSection);
-        }
-        hasMenuItem ? (
+          if (menuSection) {
+            console.log("menusectoin", menuSection);
+          }
+          /*  hasMenuItem ? (
           <MenuPrices id="menu-prices" menuPrices={menuPrices}>
             <HasMenu />
           </MenuPrices>
@@ -50,8 +52,8 @@ export const HasMenu = ({ children }) => {
           <MenuPrices id="menu-prices" menuPrices={menuPrices}>
             <HasMenu />
           </MenuPrices>
-        ) : null;
-      })}
+        ) : null; */
+        })}
       {children}
     </>
   );

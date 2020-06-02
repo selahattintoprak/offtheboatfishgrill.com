@@ -2,8 +2,8 @@ import { siteUrl } from "../../constants";
 
 export default {
   "@context": "http://schema.org",
-  "@type": "MenuSection",
-  "@id": siteUrl + "/#/schema/menu-section/food/weekly-specials",
+  "@type": "Menu",
+  "@id": siteUrl + "/#/schema/menu/weekly-specials",
   name: "Weekly Specials",
   description: "",
   // image: "https://thisisarestaurant.com/starter_dishes.jpg",
