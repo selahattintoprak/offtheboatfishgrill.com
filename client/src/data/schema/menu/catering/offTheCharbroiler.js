@@ -13,7 +13,6 @@ export default {
     availabilityEnds: "T8:21:00",
     availabilityStarts: "T8:11:00",
   },
-
   hasMenuItem: [
     {
       "@type": "MenuItem",

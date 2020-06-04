@@ -66,7 +66,7 @@ export default () => (
             name="location"
             data-amp-bind-required={`appointment == 'walkin' ? true : false`}
           >
-            <option value=" " selected="selected" disabled={true}>
+            <option value=" " disabled={true}>
               Select a Location
             </option>
             <option value="Santee">Santee</option>
@@ -92,7 +92,7 @@ export default () => (
           Time <span className="forms-req-symbol">*</span>
         </label>
         <select className="form-select form-input" name="time" required>
-          <option value=" " selected="selected" disabled={true}>
+          <option value=" " disabled={true}>
             Select Time
           </option>
           <option value="09:00">9:00 AM</option>
@@ -120,7 +120,7 @@ export default () => (
           Type of Device <span className="forms-req-symbol">*</span>
         </label>
         <select className="form-select form-input" name="deviceType" required>
-          <option value=" " selected="selected" disabled={true}>
+          <option value=" " disabled={true}>
             Select Type of Device for Repair
           </option>
           <option value="iphone">iPhone</option>

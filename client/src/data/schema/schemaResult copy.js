@@ -1,180 +1,5 @@
 [
   {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/website",
-    url: "https://www.cellphonerepairtemecula.com",
-    name: "Off The Boat Fish Grill",
-    description:
-      "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Tustin serving delicious seafood and Mediterreanean dishes",
-    publisher: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/organization" },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/webpage",
-    url: "https://www.cellphonerepairtemecula.com",
-    name: "Off The Boat Fish Grill",
-    description:
-      "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Tustin serving delicious seafood and Mediterreanean dishes",
-    keywords:
-      "CA, Fish Tacos, Fish and chips, Gyro, Kabob, Kebab, Lentil Soup, Lobster, Off The Boat Fish Grill, Orange County, Restaurant, Seafood, Taco, Tustin, healthy restaurant",
-    isPartOf: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/website" },
-    inLanguage: "en-US",
-    datePublished: "2020-06-03T16:57:59.942Z",
-    dateModified: "2020-06-03T16:57:59.942Z",
-    image: [
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/logo" },
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/slideshow" },
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/primary" },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/article",
-    headline: "Off The Boat Fish Grill",
-    description:
-      "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Tustin serving delicious seafood and Mediterreanean dishes",
-    articleBody:
-      "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Tustin serving delicious seafood and Mediterreanean dishes",
-    keywords:
-      "CA, Fish Tacos, Fish and chips, Gyro, Kabob, Kebab, Lentil Soup, Lobster, Off The Boat Fish Grill, Orange County, Restaurant, Seafood, Taco, Tustin, healthy restaurant",
-    isPartOf: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/webpage" },
-    mainEntityOfPage: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/webpage" },
-    datePublished: "2020-06-03T16:57:59.942Z",
-    dateModified: "2020-06-03T16:57:59.942Z",
-    commentCount: 6,
-    articleSection:
-      "CA, Fish Tacos, Fish and chips, Gyro, Kabob, Kebab, Lentil Soup, Lobster, Off The Boat Fish Grill, Orange County, Restaurant, Seafood, Taco, Tustin, healthy restaurant",
-    author: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/organization" },
-    publisher: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/organization" },
-    image: [
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/slideshow" },
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/primary" },
-    ],
-    video: [],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/organization",
-    url: "https://www.cellphonerepairtemecula.com",
-    name: "Off The Boat Fish Grill",
-    telephone: "+1714-544-1900",
-    email: "info@offtheboatfishgrill.com",
-    logo: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/logo" },
-    image: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/primary" },
-    sameAs: [
-      "https://www.yelp.com/biz/off-the-boat-fish-grill-tustin",
-      "https://www.facebook.com/offtheboattustin",
-      "https://www.instagram.com/offtheboattustin/",
-      "https://goo.gl/maps/dJDqxV2iy8ki8C367",
-      "https://www.grubhub.com/restaurant/off-the-boat-fish-grill-17582-17th-st-tustin/800468",
-      "https://www.grubhub.com/restaurant/off-the-boat-fish-grill-194-yorba-linda-blvd-placentia/2140105",
-      "https://goo.gl/maps/orMNDarsuNHAFLur8",
-      "https://www.yelp.com/biz/off-the-boat-fish-grill-placentia?osq=Off+The+Boat+Fish+Grill",
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    priceRange: "$$",
-    hasMenu: [
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu" },
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu/catering" },
-    ],
-    servesCuisine: ["Seafood", "Middle Eastern", "Mediterranean"],
-    OpeningHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "11:00",
-        closes: "21:00",
-      },
-    ],
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/restaurant/tustin",
-    name: "Off The Boat Fish Grill Tustin",
-    description:
-      "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Tustin serving delicious seafood and Mediterreanean dishes",
-    url: "https://www.cellphonerepairtemecula.com",
-    telephone: "+1714-544-1900",
-    email: "isquadrepair@gmail.com",
-    address: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/address/tustin" },
-    geo: { "@type": "GeoCoordinates", latitude: "33.7593785", longitude: "-117.8276426" },
-    image: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/primary" },
-    logo: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/logo" },
-    review: [
-      {
-        "@type": "Review",
-        author: "Selahattin Toprak",
-        datePublished: "2020-06-03T16:57:59.943Z",
-        description:
-          "Best Fish Tacos, Fish and chips, Gyro, Kabob, Kebab, Lentil Soup, Lobster, Off The Boat Fish Grill, Orange County, Restaurant, Seafood and Taco to be found in Tustin",
-        reviewRating: { "@type": "Rating", bestRating: 5, ratingValue: "5", worstRating: 1 },
-      },
-    ],
-    aggregateRating: { "@type": "AggregateRating", reviewCount: 1, ratingValue: "5" },
-    sameAs: [
-      "https://www.yelp.com/biz/off-the-boat-fish-grill-tustin",
-      "https://www.facebook.com/offtheboattustin",
-      "https://www.instagram.com/offtheboattustin/",
-      "https://goo.gl/maps/dJDqxV2iy8ki8C367",
-      "https://www.grubhub.com/restaurant/off-the-boat-fish-grill-17582-17th-st-tustin/800468",
-    ],
-    hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
-    areaServed: ["Tustin"],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    priceRange: "$$",
-    hasMenu: [
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu" },
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu/catering" },
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu/weekly-specials" },
-      { "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu/taco-tuesday" },
-    ],
-    servesCuisine: ["Seafood", "Middle Eastern", "Mediterranean"],
-    OpeningHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "11:00",
-        closes: "21:00",
-      },
-    ],
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/restaurant/placentia",
-    name: "Off The Boat Fish GrillPlacentia",
-    description:
-      "Off The Boat Fish Grill - A unique, healthy and affordable place to eat in Placentia serving delicious seafood and Mediterreanean dishes",
-    url: "https://www.cellphonerepairtemecula.com",
-    telephone: "+1714-983-7550",
-    email: "info@offtheboatfishgrill.com",
-    address: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/address/placentia" },
-    geo: { "@type": "GeoCoordinates", latitude: "33.885910", longitude: "-117.863310" },
-    image: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/primary" },
-    logo: { "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/logo" },
-    review: [
-      {
-        "@type": "Review",
-        author: "Selahattin Toprak",
-        datePublished: "2020-06-03T16:57:59.943Z",
-        description:
-          "Best Fish Tacos, Fish and chips, Gyro, Kabob, Kebab, Lentil Soup, Lobster, Off The Boat Fish Grill, Orange County, Restaurant, Seafood and Taco to be found in Tustin",
-        reviewRating: { "@type": "Rating", bestRating: 5, ratingValue: "5", worstRating: 1 },
-      },
-    ],
-    aggregateRating: { "@type": "AggregateRating", reviewCount: 1, ratingValue: "5" },
-    sameAs: [
-      "https://www.grubhub.com/restaurant/off-the-boat-fish-grill-194-yorba-linda-blvd-placentia/2140105",
-      "https://goo.gl/maps/orMNDarsuNHAFLur8",
-      "https://www.yelp.com/biz/off-the-boat-fish-grill-placentia?osq=Off+The+Boat+Fish+Grill",
-    ],
-    hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
-    areaServed: ["Placentia"],
-  },
-  {
     "@context": "http://schema.org",
     "@type": "Menu",
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu",
@@ -210,13 +35,13 @@
     hasMenuItem: [
       {
         "@type": "MenuItem",
-        name: "Chips &amp; Salsa",
+        name: "Chips & Salsa",
         description: "",
         offers: { "@type": "Offer", price: "3.95", priceCurrency: "USD" },
       },
       {
         "@type": "MenuItem",
-        name: "Chips &amp; Guac(6 oz)",
+        name: "Chips & Guac(6 oz)",
         description: "",
         offers: { "@type": "Offer", price: "6.95", priceCurrency: "USD" },
       },
@@ -252,7 +77,7 @@
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu-section/food/baha-bowls",
     name: "Baja Bowls",
     description:
-      "Served with basmati rice, lettuce (cabbage for fish items), jack cheese, pinto beans &amp; pico de gallo. (Sub rice for organic cauliflower rice 75¢ / Add avocado or guac 95¢)",
+      "Served with basmati rice, lettuce (cabbage for fish items), jack cheese, pinto beans & pico de gallo. (Sub rice for organic cauliflower rice 75¢ / Add avocado or guac 95¢)",
     offers: { "@type": "Offer", availabilityEnds: "T8:21:00", availabilityStarts: "T8:21:00" },
     hasMenuSection: [
       {
@@ -399,21 +224,21 @@
         "@type": "MenuItem",
         name: "Mixed Grill",
         description:
-          "Three meat skewers; filet mignon, chicken &amp; ground sirloin. Served with basmati rice, salad, hummus, tzatziki, grilled veggies &amp; pita bread.",
+          "Three meat skewers; filet mignon, chicken & ground sirloin. Served with basmati rice, salad, hummus, tzatziki, grilled veggies & pita bread.",
         offers: { "@type": "Offer", price: "29.95", priceCurrency: "USD" },
       },
       {
         "@type": "MenuItem",
         name: "Tablita",
         description:
-          "Carnitas, chicken and filet mignon. Served with rice, beans, salad, tortillas, grilled veggies &amp; pico de gallo.",
+          "Carnitas, chicken and filet mignon. Served with rice, beans, salad, tortillas, grilled veggies & pico de gallo.",
         offers: { "@type": "Offer", price: "32.95", priceCurrency: "USD" },
       },
       {
         "@type": "MenuItem",
         name: "Seafood Tablita",
         description:
-          "Grilled shrimp, wild salmon and barramundi (Asian Seabass). Served with rice, beans, salad, tortillas, grilled veggies &amp; pico de gallo.",
+          "Grilled shrimp, wild salmon and barramundi (Asian Seabass). Served with rice, beans, salad, tortillas, grilled veggies & pico de gallo.",
         offers: { "@type": "Offer", price: "35.95", priceCurrency: "USD" },
       },
     ],
@@ -528,50 +353,50 @@
       hasMenuItem: [
         {
           "@type": "MenuItem",
-          name: "Garlic Sauce &amp; Pita",
+          name: "Garlic Sauce & Pita",
           description: "",
           offers: { "@type": "Offer", price: "3.95", priceCurrency: "USD" },
         },
         {
           "@type": "MenuItem",
-          name: "Hummus &amp; Pita",
+          name: "Hummus & Pita",
           description: "",
           offers: { "@type": "Offer", price: "5.95", priceCurrency: "USD" },
         },
         {
           "@type": "MenuItem",
-          name: "Spicy Hummus &amp; Pita",
+          name: "Spicy Hummus & Pita",
           description: "",
           offers: { "@type": "Offer", price: "6.95", priceCurrency: "USD" },
         },
         {
           "@type": "MenuItem",
-          name: "Tzatziki &amp; Pita",
+          name: "Tzatziki & Pita",
           description: "Greek yogurt, cucumber, garlic, olive oil",
           offers: { "@type": "Offer", price: "5.95", priceCurrency: "USD" },
         },
         {
           "@type": "MenuItem",
           name: "Fried Cauliflower",
-          description: "Lightly fried, served with tzatziki &amp; pita",
+          description: "Lightly fried, served with tzatziki & pita",
           offers: { "@type": "Offer", price: "6.95", priceCurrency: "USD" },
         },
         {
           "@type": "MenuItem",
           name: "Dolma (5pc)",
-          description: "With hummus, tzatziki &amp; pita",
+          description: "With hummus, tzatziki & pita",
           offers: { "@type": "Offer", price: "7.95", priceCurrency: "USD" },
         },
         {
           "@type": "MenuItem",
           name: "Baba Ghanoush",
-          description: "Roasted eggplant dip, garlic, olive oil &amp; pita",
+          description: "Roasted eggplant dip, garlic, olive oil & pita",
           offers: { "@type": "Offer", price: "6.95", priceCurrency: "USD" },
         },
         {
           "@type": "MenuItem",
           name: "Flafel Combo",
-          description: "3 falafels with pita, tzatziki &amp; hummus",
+          description: "3 falafels with pita, tzatziki & hummus",
           offers: { "@type": "Offer", price: "7.95", priceCurrency: "USD" },
         },
         {
@@ -588,7 +413,7 @@
     "@type": "MenuSection",
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu-section/food/off-the-charbroiler-plates",
     name: "Off The Charbroiler - Plates",
-    description: "Served on basmati rice with veggies &amp; salad. (Sub rice for organic cauliflower rice 75¢)",
+    description: "Served on basmati rice with veggies & salad. (Sub rice for organic cauliflower rice 75¢)",
     offers: { "@type": "Offer", availabilityEnds: "T8:21:00", availabilityStarts: "T8:21:00" },
     hasMenuSection: [
       {
@@ -599,8 +424,8 @@
         hasMenuItem: [
           {
             "@type": "MenuItem",
-            name: "Fish &amp; Chips (COD)",
-            description: "Battered cod &amp; seasoned fries (or salad)",
+            name: "Fish & Chips (COD)",
+            description: "Battered cod & seasoned fries (or salad)",
             offers: { "@type": "Offer", price: "9.95", priceCurrency: "USD" },
           },
           {
@@ -710,7 +535,7 @@
           },
           {
             "@type": "MenuItem",
-            name: "Surf N&apos; Turf",
+            name: "Surf N' Turf",
             description: "Filet mignon and shrimp",
             offers: { "@type": "Offer", price: "22.95", priceCurrency: "USD" },
           },
@@ -744,7 +569,7 @@
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu-section/food/pita-wraps",
     name: "Pita Wraps",
     description:
-      "Wrapped with greens, tomatoes, pickes, onions &amp; garlic sauce. Lettuce wrap add 95¢ (Add seasoned fries or salad for $1.95)",
+      "Wrapped with greens, tomatoes, pickes, onions & garlic sauce. Lettuce wrap add 95¢ (Add seasoned fries or salad for $1.95)",
     offers: { "@type": "Offer", availabilityEnds: "T8:21:00", availabilityStarts: "T8:11:00" },
     hasMenuSection: [
       {
@@ -1000,7 +825,7 @@
           {
             "@type": "MenuItem",
             name: "Seafood Sashimi",
-            description: "Sushi grade ahi, salmon &amp; octopus. Mixed greens, spicy ponzu &amp; sesame seeds",
+            description: "Sushi grade ahi, salmon & octopus. Mixed greens, spicy ponzu & sesame seeds",
             offers: { "@type": "Offer", price: "13.95", priceCurrency: "USD" },
           },
         ],
@@ -1218,37 +1043,37 @@
           {
             "@type": "MenuItem",
             name: "Salmon",
-            description: "Capers, onions &amp; F.O.B sauce",
+            description: "Capers, onions & F.O.B sauce",
             offers: { "@type": "Offer", price: "3.25", priceCurrency: "USD" },
           },
           {
             "@type": "MenuItem",
             name: "Mahi",
-            description: "Capers, onions &amp; F.O.B sauce",
+            description: "Capers, onions & F.O.B sauce",
             offers: { "@type": "Offer", price: "3.25", priceCurrency: "USD" },
           },
           {
             "@type": "MenuItem",
             name: "Barramundi",
-            description: "With Veracruzano &amp; F.O.B sauce",
+            description: "With Veracruzano & F.O.B sauce",
             offers: { "@type": "Offer", price: "3.25", priceCurrency: "USD" },
           },
           {
             "@type": "MenuItem",
             name: "Ground Sirloin",
-            description: "Pickles, onions, tomatoes &amp; garlic sauce",
+            description: "Pickles, onions, tomatoes & garlic sauce",
             offers: { "@type": "Offer", price: "2.95", priceCurrency: "USD" },
           },
           {
             "@type": "MenuItem",
             name: "Carnitas",
-            description: "Pickles, onions, tomatoes &amp; garlic sauce",
+            description: "Pickles, onions, tomatoes & garlic sauce",
             offers: { "@type": "Offer", price: "2.95", priceCurrency: "USD" },
           },
           {
             "@type": "MenuItem",
             name: "Lamb Gyro",
-            description: "Pickles, onions, tomatoes &amp; garlic sauce",
+            description: "Pickles, onions, tomatoes & garlic sauce",
             offers: { "@type": "Offer", price: "2.95", priceCurrency: "USD" },
           },
         ],
@@ -1261,7 +1086,7 @@
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu-section/food/soft-tacos",
     name: "Soft Tacos",
     description:
-      "Served on corn tortillas, lettuce (cabbage for fish items), jack cheese, pico de gallo &amp; garlic sauce Combo includes 2 tacos, rice and beans. (Sub tortilla for lettuce 25¢)",
+      "Served on corn tortillas, lettuce (cabbage for fish items), jack cheese, pico de gallo & garlic sauce Combo includes 2 tacos, rice and beans. (Sub tortilla for lettuce 25¢)",
     offers: { "@type": "Offer", availabilityEnds: "T8:21:00", availabilityStarts: "T8:11:00" },
     hasMenuSection: [
       {
@@ -1619,14 +1444,14 @@
       },
       {
         "@type": "MenuItem",
-        name: "Shrimp Ceviche &amp; Ahi Poke",
+        name: "Shrimp Ceviche & Ahi Poke",
         description: "Topped with avocado and served with tostadas",
         offers: [{ "@type": "Offer", price: "59.00", priceCurrency: "USD" }],
       },
       {
         "@type": "MenuItem",
         name: "Mediterranean Dip Platter",
-        description: "Hummus &amp; cucumber yogurt (tzatziki) served with grilled pita and cucumbers",
+        description: "Hummus & cucumber yogurt (tzatziki) served with grilled pita and cucumbers",
         offers: [{ "@type": "Offer", price: "39.00", priceCurrency: "USD" }],
       },
       {
@@ -1670,7 +1495,7 @@
     "@context": "http://schema.org",
     "@type": "MenuSection",
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu-section/catering/grilled-meats-seafood",
-    name: "Grilled Meats &amp; Seafood (A La Carte)",
+    name: "Grilled Meats & Seafood (A La Carte)",
     description: "Small (serves 4-5) Large (Serves 8-10)",
     offers: { "@type": "Offer", availabilityEnds: "T8:21:00", availabilityStarts: "T8:11:00" },
     hasMenuItem: [
@@ -2039,7 +1864,7 @@
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu-section/catering/pita-wraps",
     name: "Pita Wraps",
     description:
-      "Small (serves 4-5), Large (Serves 8-10). Wrapped with mixed greens, onions, pickles, tomatoes &amp; garlic sauce spread. Includes a choice of basmati rice, salad or tortilla chips.",
+      "Small (serves 4-5), Large (Serves 8-10). Wrapped with mixed greens, onions, pickles, tomatoes & garlic sauce spread. Includes a choice of basmati rice, salad or tortilla chips.",
     offers: { "@type": "Offer", availabilityEnds: "T8:21:00", availabilityStarts: "T8:11:00" },
     hasMenuItem: [
       {
@@ -2162,7 +1987,7 @@
       {
         "@type": "MenuItem",
         name: "Veggie-Feta Wrap (V)",
-        description: "Zucchini, squash, onions, feta, tomatoes &amp; roasted red pepper",
+        description: "Zucchini, squash, onions, feta, tomatoes & roasted red pepper",
         offers: [
           {
             "@type": "Offer",
@@ -2395,7 +2220,7 @@
     "@type": "MenuSection",
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu-section/catering/salads",
     name: "Salads",
-    description: "Serves 8-10. Salads inlcude mixed greens, tomatoes, cucumbers, red onions &amp; fire roasted corn",
+    description: "Serves 8-10. Salads inlcude mixed greens, tomatoes, cucumbers, red onions & fire roasted corn",
     offers: { "@type": "Offer", availabilityEnds: "T8:21:00", availabilityStarts: "T8:11:00" },
     hasMenuItem: [
       {
@@ -2684,7 +2509,7 @@
     "@id": "https://www.cellphonerepairtemecula.com/#/schema/menu-section/catering/taco-party-platters",
     name: "Taco Party Platters",
     description:
-      "Includes 2 tacos per person, chips &amp; salsa, pinto beans and salad. Tacos served on corn tortillas with lettuce (cabbage for fish items), jack cheese and pico de gallo",
+      "Includes 2 tacos per person, chips & salsa, pinto beans and salad. Tacos served on corn tortillas with lettuce (cabbage for fish items), jack cheese and pico de gallo",
     offers: { "@type": "Offer", availabilityEnds: "T8:21:00", availabilityStarts: "T8:11:00" },
     hasMenuItem: [
       {
@@ -2740,7 +2565,7 @@
       },
       {
         "@type": "MenuItem",
-        name: "Chicken Salad &amp; Soup",
+        name: "Chicken Salad & Soup",
         description: "Chicken Kabob Salad with choice of lentil or cajun fish tortilla soup.",
         offers: { "@type": "Offer", price: "9.95", priceCurrency: "USD" },
       },
@@ -2774,52 +2599,5 @@
         offers: { "@type": "Offer", price: "2.95", priceCurrency: "USD" },
       },
     ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "PostalAddress",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/address/tustin",
-    streetAddress: "17582 17th street, Suite 105",
-    addressLocality: "Tustin",
-    addressRegion: "CA",
-    addressCountry: "USA",
-    postalCode: "92780",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "PostalAddress",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/address/placentia",
-    streetAddress: "194 E Yorba Linda Blvd ",
-    addressLocality: "Placentia",
-    addressRegion: "CA",
-    addressCountry: "USA",
-    postalCode: "92780",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/logo",
-    url: "https://www.cellphonerepairtemecula.com/static/images/logo-light.png",
-    caption: "Off The Boat Fish Grill",
-    width: 120,
-    height: 120,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/slideshow",
-    url: "https://www.cellphonerepairtemecula.com/static/images/slideshow.jpg",
-    caption: "Off The Boat Fish Grill",
-    width: 120,
-    height: 120,
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "@id": "https://www.cellphonerepairtemecula.com/#/schema/image/primary",
-    url: "https://www.cellphonerepairtemecula.com/static/images/primary.jpg",
-    caption: "iPhone repair, iPad repair, Samsung Galaxy repair and computer repair.",
-    width: 700,
-    height: 467,
   },
 ];
