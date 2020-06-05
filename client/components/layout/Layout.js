@@ -61,7 +61,7 @@ export default ({
       <MenusStyles />
       <OffCanvasStyles />
       <ButtonsStyles />
-      {/* <IconsStyles /> */}
+      <IconsStyles />
       <NavbarStyles />
       <NavsStyles />
       <FormsStyles />

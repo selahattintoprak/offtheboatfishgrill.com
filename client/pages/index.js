@@ -12,7 +12,7 @@ import Content from "../src/data/content";
 import ContactForm from "../components/ContactUs/ContactForm";
 
 import menus from "../src/data/schema/menu/menu";
-export const config = { amp: true };
+export const config = { amp: "hybrid" };
 
 let hCss = {
   fontWeight: "bold",
