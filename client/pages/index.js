@@ -10,7 +10,7 @@ import ContactUs from "../components/ContactUs/ContactUs";
 import Content from "../src/data/content";
 import AppointmentForm from "../components/AppointmentForm";
 import menus from '../src/data/schema/menu/menu'
-export const config = { amp: "hybrid" };
+export const config = { amp: true };
 
 let hCss = {
   fontWeight: "bold",

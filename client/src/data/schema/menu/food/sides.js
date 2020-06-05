@@ -4,7 +4,7 @@ export default {
   "@context": "http://schema.org",
   "@type": "MenuSection",
   "@id": siteUrl + "/#/schema/menu-section/food/sides",
-  name: "",
+  name: "Sides",
   description: "",
   // image: "https://thisisarestaurant.com/starter_dishes.jpg",
   offers: {

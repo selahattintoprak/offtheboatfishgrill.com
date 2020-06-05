@@ -10,11 +10,10 @@ export const HasMenu = ({ menus = null, children }) => {
   return (
     <>
       {menu.map((menu) => (
-        <MenuPrices menuPrices={setMenuPrices(menu)}>
-          {menuSection.map((section) => (
-            <MenuPrices menuPrices={setMenuPrices(section)} />
-          ))}
-        </MenuPrices>
+        <>
+          {menu.hasMenuSection && <MenuTree menus={menu}></MenuTree>}
+          {menu.hasMenuItem && <MenuPrices menuPrices={setMenuPrices(menu)} />}
+        </>
       ))}
     </>
   );
@@ -23,9 +22,33 @@ const filterMenu = (type, menu) => {
   return Array.isArray(menu) ? menu.filter(({ "@type": menuType }) => menuType == type) : [];
 };
 const menuSection = () => {};
-const MenuTree = (menu) => {
-  return <MenuPrices menuPrices={setMenuPrices(menu)} />;
+const MenuTree = ({ menus, menus: { hasMenuSection, hasMenuItem } }) => {
+  return (
+    <>
+      {Array.isArray(menus) ? (
+        <>
+          {menus.map((menu) => (
+            <MenuPrices menuPrices={setMenuPrices(menu)}>
+              {menu.hasMenuSection && <MenuTree menus={menu.hasMenuSection} />}
+            </MenuPrices>
+          ))}
+        </>
+      ) : (
+        <MenuPrices menuPrices={setMenuPrices(menus)}>
+          {hasMenuSection && <MenuTree menus={hasMenuSection} />}
+        </MenuPrices>
+      )}
+      {hasMenuItem && <MenuPrices menuPrices={setMenuPrices(menus)} />}
+     
+    </>
+  );
 };
+const SetTree = ({ menus }) => (
+  <>
+    {menus.hasMenuSection && <SetTree menus={menus.hasMenuSection}></SetTree>}
+    {menus.hasMenuItem && <MenuPrices menuPrices={setMenuPrices(menus)} />}
+  </>
+);
 const getPrice = (offers) => {
   const price = Array.isArray(offers)
     ? offers.map(({ price, eligibleQuantity }) => {

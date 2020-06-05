@@ -16,7 +16,7 @@ export default {
   hasMenuSection: [
     {
       "@type": "MenuSection",
-      name: "",
+      name: "Fish",
       description: "",
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       offers: {
