@@ -1,14 +1,14 @@
-import Quotes from "../components/Quotes/Quotes";
+// import Quotes from "../components/Quotes/Quotes";
 import SinglePage from "../components/SinglePage/SinglePage";
-import MenuPrices from "../components/MenuPrices/MenuPrices";
+//import MenuPrices from "../components/MenuPrices/MenuPrices";
 import { HasMenu } from "../components/MenuPrices/MenuPricesSchema";
-import menuPrices from "../src/data/client/menu_prices";
-import ipadRepairervices from "../src/data/client/ipad_repair_services";
-import samsungRepairServices from "../src/data/client/samsung_repair_services";
+// import menuPrices from "../src/data/client/menu_prices";
+// import ipadRepairervices from "../src/data/client/ipad_repair_services";
+// import samsungRepairServices from "../src/data/client/samsung_repair_services";
 import AboutUs from "../components/AboutUs/AboutUs";
 import ContactUs from "../components/ContactUs/ContactUs";
 import Content from "../src/data/content";
-import AppointmentForm from "../components/AppointmentForm";
+// import AppointmentForm from "../components/AppointmentForm";
 import ContactForm from "../components/ContactUs/ContactForm";
 
 import menus from "../src/data/schema/menu/menu";
@@ -53,7 +53,7 @@ export default () => (
             <div className="column col-lg-12 col-8 col-mx-auto">
               <h2>Food Menu</h2>
               <HasMenu menus={menus}>this is HasMenu</HasMenu>
-
+              {/* 
               <amp-img
                 alt="about us"
                 src="/static/images/new
@@ -61,7 +61,7 @@ export default () => (
                 layout="responsive"
                 height="295"
                 width="624"
-              />
+              /> */}
             </div>
             <div className="column col-lg-12 col-4 col-mx-auto">
               <div className="column col-xl-12 col-8 col-mx-auto">

@@ -36,7 +36,6 @@ export default class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <DefaultSeo {...SEO} />
-
           {/* <LocalBusinessJsonLd {...localBussinesData} /> */}
           <Component {...pageProps} />
           <UIStyles />
