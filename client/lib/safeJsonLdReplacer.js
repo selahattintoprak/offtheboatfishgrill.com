@@ -69,7 +69,7 @@ export const getSchema = (source) => {
       case "bigint":
         return value; // These values are not risky.
       case "string":
-        return value.replace(/[&<>'"]/g, replace);
+        return value; //value.replace(/[&<>'"]/g, replace);
       default: {
         // We shouldn't expect other types.
         isNever(value);

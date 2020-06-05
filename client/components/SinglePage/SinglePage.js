@@ -10,7 +10,7 @@ export default ({ children, title, description, seo }) => (
     <Page title={title} description={description}>
       <Layout
         navbarActions={<NavbarActions divider />}
-        navbarToggle={<Toggle/>}
+        navbarToggle={null} // Toggle
         navbarItems={null} // menuItems
         sidebarItems={null}
         logoLink={"/"}

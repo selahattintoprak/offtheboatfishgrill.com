@@ -38,8 +38,6 @@ const MenuTree = ({ menus, menus: { hasMenuSection, hasMenuItem } }) => {
           {hasMenuSection && <MenuTree menus={hasMenuSection} />}
         </MenuPrices>
       )}
-      {hasMenuItem && <MenuPrices menuPrices={setMenuPrices(menus)} />}
-     
     </>
   );
 };
