@@ -9,7 +9,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import ContactUs from "../components/ContactUs/ContactUs";
 import Content from "../src/data/content";
 import AppointmentForm from "../components/AppointmentForm";
-import menu from '../src/data/schema/menu/menu'
+import menus from '../src/data/schema/menu/menu'
 export const config = { amp: "hybrid" };
 
 let hCss = {
@@ -38,14 +38,10 @@ export default () => (
           <div className="columns">
             <div className="column col-lg-12 col-8 col-mx-auto">
               <h2>Food Menu</h2>
-              <HasMenu menu={menu}>this is HasMenu</HasMenu>
-              <h2>iPhone Repair</h2>
-              <MenuPrices id="menu-prices" menuPrices={menuPrices} />
-              <h2>iPad Repair</h2>
-              <MenuPrices id="menu-prices" menuPrices={ipadRepairervices} />
-              <h2>Samsung Repair</h2>
-              <MenuPrices id="menu-prices" menuPrices={samsungRepairServices} />
-              <amp-img alt="about us" src="/static/images/new-van-1.png" layout="responsive" height="295" width="624" />
+              <HasMenu menus={menus}>this is HasMenu</HasMenu>
+             
+              <amp-img alt="about us" src="/static/images/new
+              -van-1.png" layout="responsive" height="295" width="624" />
             </div>
             <div className="column col-lg-12 col-4 col-mx-auto">
               <h2>Book Appointment</h2>

@@ -1,70 +1,82 @@
+import * as jsonReplacer from "../../lib/safeJsonLdReplacer";
 const hasChildren = ({ children }) => children && children.length;
 
-export const HasMenu = ({ menu = null, children }) => {
-  console.log("menu", menu);
-  return Array.isArray(menu) ? (
+export const HasMenu = ({ menus = null, children }) => {
+  //.log("menu", menus);
+  let newmenu = JSON.stringify(menus, jsonReplacer.getSchema(menus));
+  let newMenuParsed = JSON.parse(newmenu);
+  const menu = filterMenu("Menu", newMenuParsed);
+  const menuSection = filterMenu("MenuSection", newMenuParsed);
+  return (
     <>
-      {menu
-        .filter(({ "@type": type }) => type == "Menu")
-        .map(({ "@type": type, name, description, hasMenuItem = [], hasMenuSection = [] }, key) => {
-          let menuSection = getSchema(hasMenuSection, menu);
-          console.log("hasMenuSection", hasMenuSection);
-          return <p key={key}> {JSON.stringify(menuSection)}</p>;
-        })}
+      {menu.map((menu) => (
+        <MenuPrices menuPrices={setMenuPrices(menu)}>
+          {menuSection.map((section) => (
+            <MenuPrices menuPrices={setMenuPrices(section)} />
+          ))}
+        </MenuPrices>
+      ))}
     </>
-  ) : null;
+  );
 };
-const getSchema = (section, source) => {
-  let schema;
-  console.log("section, source", section, source);
-  if (Array.isArray(section) && section.length > 0) {
-    schema = section.map(({ "@id": sectionId, "@type": sectionType }) => {
-      return (
-        sectionId && !sectionType && source.find(({ "@id": sourceId, "@type": sourceType }) => sourceId == sectionId)
-      );
-    });
-    console.log("isArray schema", schema);
-  } else {
-    const { "@id": sectionId, "@type": sectionType } = section;
-    if (sectionId && !sectionType) {
-      schema = source.find(({ "@id": sourceId }) => sourceId == sectionId);
-      console.log("object schema by id", schema);
-    } else {
-      schema = section;
-      console.log("object schema", schema);
-    }
-  }
-  return schema;
+const filterMenu = (type, menu) => {
+  return Array.isArray(menu) ? menu.filter(({ "@type": menuType }) => menuType == type) : [];
 };
-
-const setMenuPrices = (hasMenuItem) => {
-  console.log(hasMenuItem);
-  const items = hasMenuItem.map(({ name, description, offers, menuAddon }) => {
-    const price = Array.isArray(offers)
-      ? offers.map(({ price, eligibleQuantity: { name: qName } = { name: "" } } = {}) => ({
+const menuSection = () => {};
+const MenuTree = (menu) => {
+  return <MenuPrices menuPrices={setMenuPrices(menu)} />;
+};
+const getPrice = (offers) => {
+  const price = Array.isArray(offers)
+    ? offers.map(({ price, eligibleQuantity }) => {
+        const { name: qName } = eligibleQuantity || {};
+        //console.log("eligibleQuantity", eligibleQuantity);
+        return {
           price,
           eligibleQuantity: qName,
-        }))
-      : [
-          {
-            price: offers["price"],
-            eligibleQuantity: offers["eligibleQuantity"] && offers["eligibleQuantity"]["name"],
-          },
-        ];
-
+        };
+      })
+    : [
+        {
+          price: offers["price"],
+          eligibleQuantity: offers["eligibleQuantity"] && offers["eligibleQuantity"]["name"],
+        },
+      ];
+  return price;
+};
+const getAddon = (menuAddon) => {
+  const addon =
+    Array.isArray(menuAddon) &&
+    menuAddon.map(({ name, description, offers }) => {
+      const price = getPrice(offers);
+      return {
+        title: name,
+        description,
+        price,
+      };
+    });
+  return addon;
+};
+const setMenuPrices = (menu) => {
+  const { "@type": type, name, description, hasMenuItem = [], hasMenuSection = [], menuAddon = [] } = menu;
+  console.log(hasMenuItem);
+  const items = hasMenuItem.map(({ name, description, offers, menuAddon }) => {
+    const price = getPrice(offers);
+    const addon = getAddon(menuAddon);
     return {
       title: name,
       description,
       price,
+      menuAddon: addon,
     };
   });
-  const menuAddon = menuAddon.map();
+  const addon = getAddon(menuAddon);
   //console.log("items", items);
   return [
     {
       title: name,
       description,
-      menuAddon,
+      menuAddon: addon,
       items,
       footer: "",
     },
@@ -82,7 +94,11 @@ const MenuPrices = ({ id, menuPrices, children }) => (
           <div className="amp-accordion-body my-2">
             <div className="container">
               {description}
-              {menuAddon}
+              {menuAddon.map(({ title, description, price }) => (
+                <p>
+                  {title}-{description}-{price}
+                </p>
+              ))}
               {children}
               {items.map(({ title, description, price }, index) => (
                 <div className="columns" style={{ alignItems: "center" }} key={"col" + index}>
