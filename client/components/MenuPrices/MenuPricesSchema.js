@@ -9,39 +9,24 @@ export const HasMenu = ({ menus = null, children }) => {
   //.log("menu", menus);
   let newmenu = JSON.stringify(menus, jsonReplacer.getSchema(menus));
   let newMenuParsed = JSON.parse(newmenu);
-  const menu = filterMenu("Menu", newMenuParsed);
+  const filteredMenus = filterMenu("Menu", newMenuParsed);
   const menuSection = filterMenu("MenuSection", newMenuParsed);
-  return (
-    <>
-      {menu.map((menu, index) => (
-        <React.Fragment key={index}>
-          {menu.hasMenuSection && <MenuTree menus={menu}></MenuTree>}
-          {menu.hasMenuItem && <MenuPrices menu={menu} />}
-        </React.Fragment>
-      ))}
-    </>
-  );
+  return <MenuTree menus={filteredMenus} />;
 };
 const MenuTree = ({ menus, menus: { hasMenuSection, hasMenuItem } }) => {
-  return (
-    <>
-      {Array.isArray(menus) ? (
-        <>
-          {menus.map((menu, index) => (
-            <MenuPrices menu={menu} key={index}>
-              {menu.hasMenuSection && <MenuTree menus={menu.hasMenuSection} />}
-            </MenuPrices>
-          ))}
-        </>
-      ) : (
-        <MenuPrices menu={menus}>{hasMenuSection && <MenuTree menus={hasMenuSection} />}</MenuPrices>
-      )}
-    </>
+  return Array.isArray(menus) ? (
+    menus.map((menu, index) => (
+      <MenuPrices menu={menu} key={index}>
+        {menu.hasMenuSection && <MenuTree menus={menu.hasMenuSection} />}
+      </MenuPrices>
+    ))
+  ) : (
+    <MenuPrices menu={menus}>{hasMenuSection && <MenuTree menus={hasMenuSection} />}</MenuPrices>
   );
 };
 const MenuPrices = ({ id, menu, children }) => {
   console.log("MenuPrices menu", menu);
-  const { name, description, hasMenuItem, menuAddon, items, footer, link } = menu;
+  const { name, description, hasMenuItem, hasMenuSection, menuAddon, items, footer, link } = menu;
   return (
     <>
       <amp-accordion id={id} className="amp-accordion-container" disable-session-states="" animate="">
@@ -52,7 +37,11 @@ const MenuPrices = ({ id, menu, children }) => {
           </h2>
           <div className="amp-accordion-body my-2">
             <div className="container">
-              {description}
+              {description && (
+                <div className="mb-2" style={{ borderBottom: hasMenuSection ? "none" : "1px solid #dfdfdf" }}>
+                  {description}
+                </div>
+              )}
               {menuAddon && <Addon menuAddon={menuAddon} />}
               {children}
               {hasMenuItem ? (
