@@ -1,9 +1,10 @@
 import navbarActionsScss from "./navbar-actions.scss";
 export default ({ divider }) => (
   <div className="d-flex">
-    <a href="tel:1-951-000-0000" className="btn btn-link">
-      951-000-0000
+    <a href="tel:1-714-544-1900" className="btn btn-link">
+      714-544-1900
     </a>
+
     {/* 
     {divider && <div className="divider-vert"></div>}
     <div>

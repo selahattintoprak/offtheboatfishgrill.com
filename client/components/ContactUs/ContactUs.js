@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapPin, faMobileAlt, faBusinessTime } from "@fortawesome/free-solid-svg-icons";
 
 const timeTable = [
-  { day: "Monday", time: " 8 am – 8 pm" },
-  { day: "Tuesday", time: "8 am – 8 pm" },
-  { day: "Wednesday", time: " 8 am – 8 pm" },
-  { day: "Thursday ", time: "8 am – 8 pm" },
-  { day: "Friday", time: "8 am – 8 pm" },
-  { day: "Saturday", time: "8 am – 8 pm" },
+  { day: "Monday", time: " 11 am – 9 pm" },
+  { day: "Tuesday", time: "11 am – 9 pm" },
+  { day: "Wednesday", time: " 11 am – 9 pm" },
+  { day: "Thursday ", time: "11 am – 9 pm" },
+  { day: "Friday", time: "11 am – 9 pm" },
+  { day: "Saturday", time: "11 am – 9 pm" },
   { day: "Sunday", time: "Closed" },
 ];
 
@@ -27,13 +27,15 @@ export default () => (
             <div className="columns address">
               <div className="column col-12">
                 <FontAwesomeIcon size="lg" className="form-icon mr-2" icon={faMapPin} />
-                <span>41000 MAIN ST, TEMECULA, 92590</span>
+                <span>
+                  17582 E 17th St. Suite 105 Tustin, CA 92780 <br></br>At the Oak Tree Plaza, between Yorba & Prospect
+                </span>
               </div>
             </div>
             <div className="columns address">
               <div className="column col-12">
                 <FontAwesomeIcon size="lg" className="form-icon mr-2" icon={faMobileAlt} />
-                <a href="tel:1-562-867-5309">1-562-867-5309</a>
+                <a href="tel:1-714-544-1900">1-714-544-1900</a>
               </div>
             </div>
             <div className="columns address">

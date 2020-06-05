@@ -9,7 +9,9 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import ContactUs from "../components/ContactUs/ContactUs";
 import Content from "../src/data/content";
 import AppointmentForm from "../components/AppointmentForm";
-import menus from '../src/data/schema/menu/menu'
+import ContactForm from "../components/ContactUs/ContactForm";
+
+import menus from "../src/data/schema/menu/menu";
 export const config = { amp: true };
 
 let hCss = {
@@ -23,11 +25,23 @@ export default () => (
     <SinglePage title="Cell Phone Repair Temecula" description="Cell Phone Repair Temecula">
       <Section name="slideshow">
         <h1 className="text-center" style={{ ...hCss, fontSize: "1.75rem" }}>
-          Cell Phone Repair in Temecula
+          Fresh Off The Boat
         </h1>
+        <div className="container">
+          <div className="columns">
+            <div className="column col-3 col-mx-auto">
+              <amp-img
+                alt="off the boat fish grill logo"
+                src="/static/images/logo.png"
+                layout="responsive"
+                height="200"
+                width="200"
+              />
+            </div>
+          </div>{" "}
+        </div>
         <h3 className="text-center" style={{ ...hCss, fontSize: "1.25rem" }}>
-          We Specialize in Cell phone repair including iPhone Repair, iPad Repair, Samsung Galaxy Repair, Computer and
-          Macbook Repair
+          FROM THE COAST OF BAJA TO THE MEDITERRANEAN
         </h3>
       </Section>
       {/*  <Section name="content">
@@ -39,13 +53,21 @@ export default () => (
             <div className="column col-lg-12 col-8 col-mx-auto">
               <h2>Food Menu</h2>
               <HasMenu menus={menus}>this is HasMenu</HasMenu>
-             
-              <amp-img alt="about us" src="/static/images/new
-              -van-1.png" layout="responsive" height="295" width="624" />
+
+              <amp-img
+                alt="about us"
+                src="/static/images/new
+              -van-1.png"
+                layout="responsive"
+                height="295"
+                width="624"
+              />
             </div>
             <div className="column col-lg-12 col-4 col-mx-auto">
-              <h2>Book Appointment</h2>
-
+              <div className="column col-xl-12 col-8 col-mx-auto">
+                <h2>Contact Us</h2>
+                <ContactForm />
+              </div>
               {/* <AppointmentForm /> */}
             </div>
           </div>
