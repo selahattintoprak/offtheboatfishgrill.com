@@ -53,7 +53,10 @@ export default {
       ],
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
-      menuAddon: [{ "@id": siteUrl + "/#/schema/menu-item-addon/taco-pack-protein" }],
+      menuAddon: [
+        { "@id": siteUrl + "/#/schema/menu-item-addon/salad-dressing" },
+        { "@id": siteUrl + "/#/schema/menu-item-addon/fiesta-taco-pack-protein" },
+      ],
     },
   ],
 };

@@ -3,7 +3,7 @@ import { siteUrl } from "../../constants";
 export default {
   "@context": "http://schema.org",
   "@type": "MenuItem",
-  "@id": siteUrl + "/#/schema/menu-item-addon/taco-pack-protein",
+  "@id": siteUrl + "/#/schema/menu-item-addon/fiesta-taco-pack-protein",
   name: "Fiesta Taco Pack Protein",
   description: "",
   offers: [

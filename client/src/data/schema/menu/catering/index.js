@@ -9,6 +9,8 @@ import saladDressing from "./saladDressing";
 import salads from "./salads";
 import sides from "./sides";
 import tacoPackProtein from "./tacoPackProtein";
+import fiestaTacoPackProtein from "./fiestaTacoPackProtein";
+
 import tacoPartyPlatters from "./tacoPartyPlatters";
 
 export default [
@@ -22,6 +24,7 @@ export default [
   saladDressing,
   salads,
   sides,
+  fiestaTacoPackProtein,
   tacoPackProtein,
   tacoPartyPlatters,
 ];
