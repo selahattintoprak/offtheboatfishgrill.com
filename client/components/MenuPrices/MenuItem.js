@@ -11,6 +11,7 @@ export default ({ menuItem }) => {
         key={"item-" + name}
         style={{ borderBottom: "1px solid #dfdfdf" }}
       >
+        <div className="col-12">{menuAddon && <Addon menuAddon={menuAddon} />}</div>
         <div className="column col-8">
           <div>
             {name && (
@@ -19,7 +20,6 @@ export default ({ menuItem }) => {
               </div>
             )}
             {description && <div style={{ color: "rgb(94, 94, 94)", fontWeight: "400" }}>{description}</div>}
-            {menuAddon && <Addon menuAddon={menuAddon} />}
           </div>
         </div>
         <div className="column col-4 text-center">
