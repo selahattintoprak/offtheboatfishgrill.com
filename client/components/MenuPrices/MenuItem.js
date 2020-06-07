@@ -1,17 +1,32 @@
 import Addon from "./Addon";
 import Offers from "./Offers";
-export default ({ menuItem }) => {
+
+const MenuItem = ({ menuItem, children }) => {
   const { name, description, offers, menuAddon } = menuItem;
 
   return (
     <>
+      {children && <div className="col-12">{children}</div>}
+      {menuAddon && (
+        <div className="col-12">
+          <amp-accordion className="amp-accordion-container" disable-session-states="" animate="">
+            <section className="amp-accordion">
+              <h2 className="amp-accordion-header" style={{ fontSize: "1rem", padding: "0.3rem" }}>
+                Choices
+                <i className="icon icon-arrow-right"></i>
+              </h2>
+              <div>
+                <Addon menuAddon={menuAddon} />
+              </div>
+            </section>
+          </amp-accordion>
+        </div>
+      )}
       <div
         className="columns centerFlex"
         style={{ alignItems: "center" }}
         key={"item-" + name}
-        style={{ borderBottom: "1px solid #dfdfdf" }}
       >
-        <div className="col-12">{menuAddon && <Addon menuAddon={menuAddon} />}</div>
         <div className="column col-8">
           <div>
             {name && (
@@ -24,7 +39,7 @@ export default ({ menuItem }) => {
         </div>
         <div className="column col-4 text-center">
           <div className="columns" style={{ alignItems: "center" }}>
-            <Offers offers={offers} />
+            {offers && <Offers offers={offers} />}
           </div>
         </div>
       </div>
@@ -39,3 +54,4 @@ export default ({ menuItem }) => {
     </>
   );
 };
+export default MenuItem;

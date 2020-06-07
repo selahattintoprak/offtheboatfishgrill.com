@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export",
-    "serve": "serve out"
+    "serve": "serve out",
+    "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",

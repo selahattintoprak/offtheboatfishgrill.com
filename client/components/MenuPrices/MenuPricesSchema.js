@@ -24,7 +24,7 @@ const MenuTree = ({ menus, menus: { hasMenuSection, hasMenuItem } }) => {
     <MenuPrices menu={menus}>{hasMenuSection && <MenuTree menus={hasMenuSection} />}</MenuPrices>
   );
 };
-const MenuPrices = ({ id, menu, children }) => {
+export const MenuPrices = ({ id, menu, children }) => {
   console.log("MenuPrices menu", menu);
   const { name, description, hasMenuItem, hasMenuSection, menuAddon, items, footer, link } = menu;
   return (
@@ -35,14 +35,13 @@ const MenuPrices = ({ id, menu, children }) => {
             {name}
             <i className="icon icon-arrow-right"></i>
           </h2>
-          <div className="amp-accordion-body my-2">
+
+          <div
+            className="amp-accordion-body my-2"
+            style={{ borderBottom: hasMenuSection && !menuAddon ? "none" : "1px solid #dfdfdf" }}
+          >
             <div className="container">
-              {description && (
-                <div className="mb-2" style={{ borderBottom: hasMenuSection ? "none" : "1px solid #dfdfdf" }}>
-                  {description}
-                </div>
-              )}
-              {menuAddon && <Addon menuAddon={menuAddon} />}
+              {description && <div className="mb-2">{description}</div>}
               {children}
               {hasMenuItem ? (
                 Array.isArray(hasMenuItem) ? (
@@ -51,6 +50,7 @@ const MenuPrices = ({ id, menu, children }) => {
                   <MenuItem menuItem={hasMenuItem} />
                 )
               ) : null}
+
               {footer}
             </div>
           </div>
