@@ -46,14 +46,7 @@ const Addon = ({ menuAddon, children }) => {
                             </h2>
                             <div className="amp-accordion-body my-2">
                               <div className="container">
-                                {description && (
-                                  <div
-                                    className="mb-2"
-                                    style={{ borderBottom: hasMenuSection ? "none" : "1px solid #dfdfdf" }}
-                                  >
-                                    {description}
-                                  </div>
-                                )}
+                                {description && <div className="mb-2">{description}</div>}
                                 {children}
 
                                 {addon && <Addon menuAddon={addon} />}
@@ -62,12 +55,7 @@ const Addon = ({ menuAddon, children }) => {
                           </section>
                         </amp-accordion>
                       ) : (
-                        <div
-                          className="columns centerFlex"
-                          style={{ alignItems: "center" }}
-                          key={"item-" + name}
-                          style={{ borderBottom: "1px solid #dfdfdf" }}
-                        >
+                        <div className="columns centerFlex" style={{ alignItems: "center" }} key={"item-" + name}>
                           <div className="column col-8">
                             <div>
                               {name && (

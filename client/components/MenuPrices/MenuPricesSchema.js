@@ -29,7 +29,7 @@ const MenuTree = ({ menus, menus: { hasMenuSection, hasMenuItem } }) => {
 };
 export const MenuPrices = ({ id, menu, children }) => {
   console.log("MenuPrices menu", menu);
-  const { name, description, hasMenuItem, hasMenuSection, menuAddon, items, footer, link } = menu;
+  const { name, description, hasMenuItem, hasMenuSection, menuAddon, footer, link } = menu;
   return (
     <>
       <amp-accordion id={id} className="amp-accordion-container" disable-session-states="" animate="">
@@ -39,11 +39,7 @@ export const MenuPrices = ({ id, menu, children }) => {
             {/* <i className="icon icon-arrow-right"></i> */}
             <FontAwesomeIcon className="amp-accordion-icon" icon={faChevronDown} />
           </h2>
-
-          <div
-            className="amp-accordion-body my-2"
-            style={{ borderBottom: hasMenuSection && !menuAddon ? "none" : "1px solid #dfdfdf" }}
-          >
+          <div className="amp-accordion-body my-2 p-2">
             <div className="container">
               {description && <div className="mb-2">{description}</div>}
               {children}
