@@ -86,7 +86,6 @@ export default ({
           .amp-accordion .amp-accordion-header .amp-accordion-icon {
             float: right;
             transition: transform 0.25s;
-            transform: rotate(0deg);
           }
           .amp-accordion .amp-accordion-header[aria-expanded="true"] .amp-accordion-icon {
             transform: rotate(-180deg);

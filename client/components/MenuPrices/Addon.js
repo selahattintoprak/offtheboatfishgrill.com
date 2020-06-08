@@ -23,7 +23,7 @@ const Addon = ({ menuAddon, children }) => {
   const { name, description, menuAddon: addon } = menuAddon;
   return (
     <>
-      <div className="menuAddon">
+      <div className="menuAddon p-2">
         {menuAddon ? (
           Array.isArray(menuAddon) ? (
             menuAddon.map(({ name, description, offers, menuAddon: addon }, index) => {
@@ -46,7 +46,7 @@ const Addon = ({ menuAddon, children }) => {
                             </h2>
                             <div className="amp-accordion-body my-2">
                               <div className="container">
-                                {description && <div className="mb-2">{description}</div>}
+                                {description && <div className="mb-2 my-2">{description}</div>}
                                 {children}
 
                                 {addon && <Addon menuAddon={addon} />}
