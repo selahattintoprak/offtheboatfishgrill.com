@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Offers from "./Offers";
 import MenuItem from "./MenuItem";
 import { MenuPrices } from "./MenuPricesSchema";
@@ -39,7 +41,8 @@ const Addon = ({ menuAddon, children }) => {
                           <section className="amp-accordion">
                             <h2 className="amp-accordion-header" style={{ fontSize: "1rem", padding: "0.3rem" }}>
                               {name}
-                              <i className="icon icon-arrow-right"></i>
+                              {/* <i className="icon icon-arrow-right"></i> */}
+                              <FontAwesomeIcon className="amp-accordion-icon" icon={faChevronDown} />
                             </h2>
                             <div className="amp-accordion-body my-2">
                               <div className="container">
@@ -99,12 +102,6 @@ const Addon = ({ menuAddon, children }) => {
           )
         ) : null}
       </div>
-      <style jsx global>
-        {`
-          .menuAddon {
-          }
-        `}
-      </style>
     </>
   );
 };

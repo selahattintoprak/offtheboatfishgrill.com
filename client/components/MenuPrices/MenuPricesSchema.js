@@ -1,6 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import * as jsonReplacer from "../../lib/safeJsonLdReplacer";
 import Addon from "./Addon";
 import MenuItem from "./MenuItem";
+
 const hasChildren = ({ children }) => children && children.length;
 const filterMenu = (type, menu) => {
   return Array.isArray(menu) ? menu.filter(({ "@type": menuType }) => menuType == type) : [];
@@ -33,7 +36,8 @@ export const MenuPrices = ({ id, menu, children }) => {
         <section className="amp-accordion" key={id}>
           <h2 className="amp-accordion-header" style={{ fontSize: "1rem", padding: "0.3rem" }}>
             {name}
-            <i className="icon icon-arrow-right"></i>
+            {/* <i className="icon icon-arrow-right"></i> */}
+            <FontAwesomeIcon className="amp-accordion-icon" icon={faChevronDown} />
           </h2>
 
           <div
@@ -70,15 +74,12 @@ export const MenuPrices = ({ id, menu, children }) => {
             outline: none;
             color: #b75b0a;
           }
-          .amp-accordion-body {
-          }
-          .amp-accordion .amp-accordion-header .icon {
+          .amp-accordion .amp-accordion-header .amp-accordion-icon {
             float: right;
-            transform: rotate(90deg);
             transition: transform 0.25s;
           }
-          .amp-accordion[expanded] .amp-accordion-header .icon {
-            transform: rotate(-90deg);
+          .amp-accordion[expanded] .amp-accordion-header .amp-accordion-icon {
+            transform: rotate(-180deg);
           }
         `}
       </style>

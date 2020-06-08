@@ -5,6 +5,7 @@ import { menuItems } from "../../src/data/client/menu_items";
 import { NextSeo } from "next-seo";
 import Footer from "./Footer/Footer";
 import Toggle from "./Toggle/Toggle";
+
 export default ({ children, title, description, seo }) => (
   <>
     <Page title={title} description={description}>

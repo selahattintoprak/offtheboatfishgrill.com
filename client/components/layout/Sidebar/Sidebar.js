@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import sidebarScss from "./sidebar.scss";
 import ActiveLink from "../../ActiveLink";
 import { AmpIncludeAmpSidebar } from "../../amp/AmpCustomElement";
@@ -25,18 +27,16 @@ export default ({ sidebarItems, navbarActions }) => (
                       <a className="btn btn-link">{title}</a>
                     </ActiveLink>
                     <h4 className="btn" amp-nested-submenu-open="">
-                      <i className="icon icon-caret"></i>
+                      {/* <i className="icon icon-caret"></i> */}
+                      <FontAwesomeIcon className="icon" icon={faCaretDown} />
                     </h4>
                     <div amp-nested-submenu="">
                       <ul className="menu" style={{ display: "block" }}>
                         {back && (
                           <li className="menu-item">
-                            <h6
-                              amp-nested-submenu-close=""
-                              className="btn btn-link"
-                              style={{ margin: 0 }}
-                            >
-                              <i className="icon icon-arrow-left"></i>
+                            <h6 amp-nested-submenu-close="" className="btn btn-link" style={{ margin: 0 }}>
+                              {/* <i className="icon icon-arrow-left"></i> */}
+                              <FontAwesomeIcon className="mr-1" icon={faCaretLeft} />
                               {back}
                             </h6>
                           </li>

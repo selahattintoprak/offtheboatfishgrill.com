@@ -1,4 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faCross, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { ModalsStyles } from "../../ui-styles/styles";
+
 export default ({ className, id, title, body, footer }) => (
   <>
     <div className={"modal " + className} id={id}>
@@ -7,7 +10,8 @@ export default ({ className, id, title, body, footer }) => (
         <div className="modal-header">
           <div className="modal-title h5">{title}</div>
           <a href="#close" className="btn btn-clear" aria-label="Close">
-            <i className="icon icon-cross"></i>
+            {/* <i className="icon icon-cross"></i> */}
+            <FontAwesomeIcon icon={faTimes} />
           </a>
         </div>
         <div className="modal-body">

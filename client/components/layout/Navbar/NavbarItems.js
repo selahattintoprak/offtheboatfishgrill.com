@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import navbarItemsScss from "./navbar-items.scss";
 import ActiveLink from "../../ActiveLink";
 
@@ -26,14 +28,13 @@ const SubmenuItem = ({ title, link, columns }) => (
   <>
     <li className="menu-item">
       <ActiveLink activeClassName="active" href={link}>
-        <a className="btn btn-link">
-          {title}
-        </a>
+        <a className="btn btn-link">{title}</a>
       </ActiveLink>
     </li>
     <li className="menu-item">
       <a href="#" className="btn" role="button">
-        <i className="icon icon-caret"></i>
+        {/* <i className="icon icon-caret"></i> */}
+        <FontAwesomeIcon icon={faCaretDown} />
       </a>
 
       <div role="dialog">

@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
 export default ({ id, menuPrices }) => (
   <>
     <amp-accordion id={id} className="amp-accordion-container" disable-session-states="" animate="">
@@ -5,7 +8,8 @@ export default ({ id, menuPrices }) => (
         <section className="amp-accordion" key={id + index}>
           <h2 className="amp-accordion-header" style={{ fontSize: "1rem", padding: "0.3rem" }}>
             {title}
-            <i className="icon icon-arrow-right"></i>
+            {/* <i className="icon icon-arrow-right"></i> */}
+            <FontAwesomeIcon className="amp-accordion-icon" icon={faChevronDown} />
           </h2>
           <div className="amp-accordion-body my-2">
             <div className="container">
@@ -41,15 +45,12 @@ export default ({ id, menuPrices }) => (
           outline: none;
           color: #b75b0a;
         }
-        .amp-accordion-body {
-        }
-        .amp-accordion .amp-accordion-header .icon {
+        .amp-accordion .amp-accordion-header .amp-accordion-icon {
           float: right;
-          transform: rotate(90deg);
           transition: transform 0.25s;
         }
-        .amp-accordion[expanded] .amp-accordion-header .icon {
-          transform: rotate(-90deg);
+        .amp-accordion[expanded] .amp-accordion-header .amp-accordion-icon {
+          transform: rotate(-180deg);
         }
       `}
     </style>

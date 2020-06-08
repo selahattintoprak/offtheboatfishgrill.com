@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Addon from "./Addon";
 import Offers from "./Offers";
 
@@ -13,7 +15,8 @@ const MenuItem = ({ menuItem, children }) => {
             <section className="amp-accordion">
               <h2 className="amp-accordion-header" style={{ fontSize: "1rem", padding: "0.3rem" }}>
                 Choices
-                <i className="icon icon-arrow-right"></i>
+                {/* <i className="icon icon-arrow-right"></i> */}
+                <FontAwesomeIcon className="amp-accordion-icon" icon={faChevronDown} />
               </h2>
               <div>
                 <Addon menuAddon={menuAddon} />
@@ -22,11 +25,7 @@ const MenuItem = ({ menuItem, children }) => {
           </amp-accordion>
         </div>
       )}
-      <div
-        className="columns centerFlex"
-        style={{ alignItems: "center" }}
-        key={"item-" + name}
-      >
+      <div className="columns centerFlex" style={{ alignItems: "center" }} key={"item-" + name}>
         <div className="column col-8">
           <div>
             {name && (
