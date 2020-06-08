@@ -91,6 +91,9 @@ export default ({
           .amp-accordion .amp-accordion-header[aria-expanded="true"] .amp-accordion-icon {
             transform: rotate(-180deg);
           }
+          .text-end {
+            text-align: end;
+          }
         `}
       </style>
     </>
