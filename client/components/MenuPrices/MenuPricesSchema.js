@@ -1,16 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import * as jsonReplacer from "../../lib/safeJsonLdReplacer";
+import { findReplaceSchemaById, filterMenu } from "../../lib/schema/index";
+
 import Addon from "./Addon";
 import MenuItem from "./MenuItem";
 
 const hasChildren = ({ children }) => children && children.length;
-const filterMenu = (type, menu) => {
-  return Array.isArray(menu) ? menu.filter(({ "@type": menuType }) => menuType == type) : [];
-};
+
 export const HasMenu = ({ menus = null, children }) => {
   //.log("menu", menus);
-  let newmenu = JSON.stringify(menus, jsonReplacer.getSchema(menus));
+  let newmenu = JSON.stringify(menus, findReplaceSchemaById(menus));
   let newMenuParsed = JSON.parse(newmenu);
   const filteredMenus = filterMenu("Menu", newMenuParsed);
   const menuSection = filterMenu("MenuSection", newMenuParsed);
