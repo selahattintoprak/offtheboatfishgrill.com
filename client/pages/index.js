@@ -12,6 +12,7 @@ import Content from "../src/data/content";
 import ContactForm from "../components/ContactUs/ContactForm";
 
 import menus from "../src/data/schema/menu/menu";
+import SchemaMenu from "../components/SchemaMenu/SchemaMenu";
 export const config = { amp: "hybrid" };
 
 let hCss = {
@@ -22,7 +23,10 @@ let hCss = {
 };
 export default () => (
   <>
-    <SinglePage title="Cell Phone Repair Temecula" description="Cell Phone Repair Temecula">
+    <SinglePage
+      title="Cell Phone Repair Temecula"
+      description="Cell Phone Repair Temecula"
+    >
       <Section name="slideshow">
         <h1 className="text-center" style={{ ...hCss, fontSize: "1.75rem" }}>
           Fresh Off The Boat
@@ -51,8 +55,10 @@ export default () => (
         <div className="container">
           <div className="columns">
             <div className="column col-lg-12 col-8 col-mx-auto">
-              <h2>Food Menu</h2>
-              <HasMenu menus={menus}>this is HasMenu</HasMenu>
+              {/*  <h2>Food Menu</h2>
+              <HasMenu menus={menus}>this is HasMenu</HasMenu> */}
+              <h2>Schema Menu</h2>
+              <SchemaMenu menus={menus}>this is HasMenu</SchemaMenu>
               {/* 
               <amp-img
                 alt="about us"
@@ -65,8 +71,8 @@ export default () => (
             </div>
             <div className="column col-lg-12 col-4 col-mx-auto">
               <div className="column col-xl-12 col-8 col-mx-auto">
-                <h2>Contact Us</h2>
-                <ContactForm />
+               {/*  <h2>Contact Us</h2>
+                <ContactForm /> */}
               </div>
               {/* <AppointmentForm /> */}
             </div>

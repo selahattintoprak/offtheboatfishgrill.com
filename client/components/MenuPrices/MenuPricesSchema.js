@@ -27,7 +27,7 @@ const MenuTree = ({ menus, menus: { hasMenuSection, hasMenuItem } }) => {
   );
 };
 export const MenuPrices = ({ id, menu, children }) => {
-  console.log("MenuPrices menu", menu);
+  //console.log("MenuPrices menu", menu);
   const { name, description, hasMenuItem, hasMenuSection, menuAddon, footer, link } = menu;
   return (
     <>
