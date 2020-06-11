@@ -12,6 +12,7 @@ import tacoPackProtein from "./tacoPackProtein";
 import fiestaTacoPackProtein from "./fiestaTacoPackProtein";
 
 import tacoPartyPlatters from "./tacoPartyPlatters";
+import pitaWrapsSides from "./pitaWrapsSides";
 
 export default [
   catering,
@@ -21,6 +22,7 @@ export default [
   offTheCharbroiler,
   offTheCharbroilerSides,
   pitaWraps,
+  pitaWrapsSides,
   saladDressing,
   salads,
   sides,

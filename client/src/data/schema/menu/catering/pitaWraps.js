@@ -1,50 +1,5 @@
 import { siteUrl } from "../../constants";
 
-const sides = [
-  {
-    "@type": "MenuItem",
-    name: "Basmati Rice",
-    description: "",
-    offers: [
-      {
-        "@type": "Offer",
-        price: "00.00",
-        priceCurrency: "USD",
-      },
-    ],
-    // image: "https://thisisarestaurant.com/starter_dishes.jpg",
-    // suitableForDiet: "http://schema.org/GlutenFreeDiet",
-  },
-  {
-    "@type": "MenuItem",
-    name: "Salad",
-    description: "",
-    offers: [
-      {
-        "@type": "Offer",
-        price: "00.00",
-        priceCurrency: "USD",
-      },
-    ],
-    // image: "https://thisisarestaurant.com/starter_dishes.jpg",
-    // suitableForDiet: "http://schema.org/GlutenFreeDiet",
-  },
-  {
-    "@type": "MenuItem",
-    name: "Tortilla Chips",
-    description: "",
-    offers: [
-      {
-        "@type": "Offer",
-        price: "00.00",
-        priceCurrency: "USD",
-      },
-    ],
-    // image: "https://thisisarestaurant.com/starter_dishes.jpg",
-    // suitableForDiet: "http://schema.org/GlutenFreeDiet",
-  },
-];
-
 export default {
   "@context": "http://schema.org",
   "@type": "MenuSection",
@@ -84,7 +39,9 @@ export default {
           },
         },
       ],
-      menuAddon: sides,
+      menuAddon: {
+        "@id": siteUrl + "/#/schema/menu-item-addon/pita-wraps-sides",
+      },
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
@@ -112,7 +69,9 @@ export default {
           },
         },
       ],
-      menuAddon: sides,
+      menuAddon: {
+        "@id": siteUrl + "/#/schema/menu-item-addon/pita-wraps-sides",
+      },
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
@@ -140,14 +99,17 @@ export default {
           },
         },
       ],
-      menuAddon: sides,
+      menuAddon: {
+        "@id": siteUrl + "/#/schema/menu-item-addon/pita-wraps-sides",
+      },
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
     {
       "@type": "MenuItem",
       name: "Veggie-Feta Wrap (V)",
-      description: "Zucchini, squash, onions, feta, tomatoes & roasted red pepper",
+      description:
+        "Zucchini, squash, onions, feta, tomatoes & roasted red pepper",
       offers: [
         {
           "@type": "Offer",
@@ -168,7 +130,9 @@ export default {
           },
         },
       ],
-      menuAddon: sides,
+      menuAddon: {
+        "@id": siteUrl + "/#/schema/menu-item-addon/pita-wraps-sides",
+      },
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
@@ -196,7 +160,9 @@ export default {
           },
         },
       ],
-      menuAddon: sides,
+      menuAddon: {
+        "@id": siteUrl + "/#/schema/menu-item-addon/pita-wraps-sides",
+      },
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
@@ -224,7 +190,9 @@ export default {
           },
         },
       ],
-      menuAddon: sides,
+      menuAddon: {
+        "@id": siteUrl + "/#/schema/menu-item-addon/pita-wraps-sides",
+      },
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
@@ -252,7 +220,9 @@ export default {
           },
         },
       ],
-      menuAddon: sides,
+      menuAddon: {
+        "@id": siteUrl + "/#/schema/menu-item-addon/pita-wraps-sides",
+      },
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },
@@ -280,7 +250,9 @@ export default {
           },
         },
       ],
-      menuAddon: sides,
+      menuAddon: {
+        "@id": siteUrl + "/#/schema/menu-item-addon/pita-wraps-sides",
+      },
       // image: "https://thisisarestaurant.com/starter_dishes.jpg",
       // suitableForDiet: "http://schema.org/GlutenFreeDiet",
     },

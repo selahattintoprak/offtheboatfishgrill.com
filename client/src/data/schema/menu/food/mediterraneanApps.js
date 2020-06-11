@@ -12,7 +12,7 @@ export default {
     availabilityEnds: "T8:21:00",
     availabilityStarts: "T8:11:00",
   },
-  hasMenuSection: {
+  hasMenuSection: [{
     "@type": "MenuSection",
     name: "Vegetarian",
     description: "",
@@ -132,5 +132,5 @@ export default {
         // suitableForDiet: "http://schema.org/GlutenFreeDiet",
       },
     ],
-  },
+  },]
 };
