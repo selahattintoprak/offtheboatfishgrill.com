@@ -1,5 +1,6 @@
 import accordionsScss from "./accordions.scss";
 import { AccordionsStyles } from "../../../ui-styles/styles";
+
 export default ({ children, accordionItems }) => (
   <>
     <div className="accordion-container">

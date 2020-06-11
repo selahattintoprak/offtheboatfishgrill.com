@@ -41,7 +41,7 @@ export const metaDescriptionTustin =
 
 //Placentia
 export const addressPlacentia = {
-  streetAddress: "194 E Yorba Linda Blvd ",
+  streetAddress: "194 E Yorba Linda Blvd",
   addressLocality: "Placentia",
   addressRegion: "CA",
   addressCountry: "USA",

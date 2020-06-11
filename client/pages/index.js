@@ -6,14 +6,15 @@ import { HasMenu } from "../components/MenuPrices/MenuPricesSchema";
 // import ipadRepairervices from "../src/data/client/ipad_repair_services";
 // import samsungRepairServices from "../src/data/client/samsung_repair_services";
 import AboutUs from "../components/AboutUs/AboutUs";
-import ContactUs from "../components/ContactUs/ContactUs";
+import ContactUs from "../components/SchemaContactUs/ContactUs";
 import Content from "../src/data/content";
 // import AppointmentForm from "../components/AppointmentForm";
 import ContactForm from "../components/ContactUs/ContactForm";
 
 import menus from "../src/data/schema/menu/menu";
+import schema from "../src/data/schema/schema";
 import SchemaMenu from "../components/SchemaMenu/SchemaMenu";
-export const config = { amp: "hybrid" };
+export const config = { amp: true };
 
 let hCss = {
   fontWeight: "bold",
@@ -59,7 +60,7 @@ export default () => (
         <AboutUs />
       </Section>
       <Section name="contact-us">
-        <ContactUs />
+        <ContactUs schema={schema} />
       </Section>
     </SinglePage>
     <style jsx global>
@@ -99,7 +100,7 @@ const Section = ({ name, children }) => (
   <section className={`section section-${name}`}>
     <div className="container">
       <div className="columns">
-        <div className="column col-xl-10 col-6 col-mx-auto">
+        <div className="column col-xl-10 col-8 col-mx-auto">
           <div className="">{children}</div>
         </div>
       </div>

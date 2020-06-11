@@ -19,7 +19,7 @@ const AddonList = ({ addon }) => {
 };
 
 const Addon = ({ menuAddon, children }) => {
-  console.log("menuAddon", menuAddon);
+  //console.log("menuAddon", menuAddon);
   const { name, description, menuAddon: addon } = menuAddon;
   return (
     <>

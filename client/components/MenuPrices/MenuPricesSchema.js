@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { findReplaceSchemaById, filterMenu } from "../../lib/schema/index";
+import { findReplaceSchemaById, filterSchemaByType } from "../../lib/schema/index";
 
 import Addon from "./Addon";
 import MenuItem from "./MenuItem";
@@ -11,8 +11,8 @@ export const HasMenu = ({ menus = null, children }) => {
   //.log("menu", menus);
   let newmenu = JSON.stringify(menus, findReplaceSchemaById(menus));
   let newMenuParsed = JSON.parse(newmenu);
-  const filteredMenus = filterMenu("Menu", newMenuParsed);
-  const menuSection = filterMenu("MenuSection", newMenuParsed);
+  const filteredMenus = filterSchemaByType("Menu", newMenuParsed);
+  const menuSection = filterSchemaByType("MenuSection", newMenuParsed);
   return <MenuTree menus={filteredMenus} />;
 };
 const MenuTree = ({ menus, menus: { hasMenuSection, hasMenuItem } }) => {

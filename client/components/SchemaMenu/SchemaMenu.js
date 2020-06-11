@@ -1,20 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { findReplaceSchemaById, filterMenu } from "../../lib/schema/index";
+import { findReplaceSchemaById, filterSchemaByType } from "../../lib/schema/index";
 import MenuItem from "./MenuItem";
 const hasChildren = ({ children }) => children && children.length;
 
 export const HasMenu = ({ menus = null, children }) => {
-  //.log("menu", menus);
   let newmenu = JSON.stringify(menus, findReplaceSchemaById(menus));
   let newMenuParsed = JSON.parse(newmenu);
-  const filteredMenus = filterMenu("Menu", newMenuParsed);
-  const menuSection = filterMenu("MenuSection", newMenuParsed);
+  const filteredMenus = filterSchemaByType("Menu", newMenuParsed);
+  const menuSection = filterSchemaByType("MenuSection", newMenuParsed);
   return <MenuTree id="schema-menu" menus={filteredMenus} />;
 };
 
 export const MenuTree = ({ id, menus, children }) => {
-  console.log("MenuPrices menu", menus);
+  //console.log("MenuPrices menu", menus);
   return (
     Array.isArray(menus) &&
     menus.map((menu, index) => {

@@ -22,7 +22,15 @@ const common = {
   OpeningHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
       opens: "11:00",
       closes: "21:00",
     },
@@ -74,13 +82,18 @@ const tustin = {
   sameAs: sameAsTustin,
   hasMap: "https://goo.gl/maps/QS9qdGRdkJi9isPm9",
   areaServed: ["Tustin"],
-  hasMenu: [{ "@id": siteUrl + "/#/schema/menu" }, { "@id": siteUrl + "/#/schema/menu/catering" }],
+  hasMenu: [
+    { "@id": siteUrl + "/#/schema/menu" },
+    { "@id": siteUrl + "/#/schema/menu/catering" },
+    { "@id": siteUrl + "/#/schema/menu/weekly-specials" },
+    { "@id": siteUrl + "/#/schema/menu/taco-tuesday" },
+  ],
 };
 
 const placentia = {
   ...common,
   "@id": siteUrl + "/#/schema/restaurant/placentia",
-  name: siteName + "Placentia",
+  name: siteName + " Placentia",
   description: metaDescriptionPlacentia,
   url: siteUrl,
   telephone: telephonePlacentia,
