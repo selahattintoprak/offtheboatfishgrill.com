@@ -52,32 +52,8 @@ export default () => (
         <div className="content">{Content}</div>
       </Section> */}
       <Section name="menu-price">
-        <div className="container">
-          <div className="columns">
-            <div className="column col-lg-12 col-8 col-mx-auto">
-              {/*  <h2>Food Menu</h2>
-              <HasMenu menus={menus}>this is HasMenu</HasMenu> */}
-              <h2>Schema Menu</h2>
-              <SchemaMenu menus={menus}>this is HasMenu</SchemaMenu>
-              {/* 
-              <amp-img
-                alt="about us"
-                src="/static/images/new
-              -van-1.png"
-                layout="responsive"
-                height="295"
-                width="624"
-              /> */}
-            </div>
-            <div className="column col-lg-12 col-4 col-mx-auto">
-              <div className="column col-xl-12 col-8 col-mx-auto">
-               {/*  <h2>Contact Us</h2>
-                <ContactForm /> */}
-              </div>
-              {/* <AppointmentForm /> */}
-            </div>
-          </div>
-        </div>
+        <h2>Menus</h2>
+        <SchemaMenu menus={menus} />
       </Section>
       <Section name="about-us">
         <AboutUs />
@@ -123,7 +99,7 @@ const Section = ({ name, children }) => (
   <section className={`section section-${name}`}>
     <div className="container">
       <div className="columns">
-        <div className="column col-lg-12 col-10 col-mx-auto">
+        <div className="column col-xl-10 col-6 col-mx-auto">
           <div className="">{children}</div>
         </div>
       </div>
