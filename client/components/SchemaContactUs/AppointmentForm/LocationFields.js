@@ -11,13 +11,8 @@ export default () => (
       <option value=" " selected="selected" disabled="true">
         Select a Location
       </option>
-      <option value="Santee">Santee</option>
-      <option value="Mission Valley">Mission Valley</option>
-      <option value="San Diego (Miramar)">San Diego (Miramar)</option>
-      <option value="Carlsbad">Carlsbad</option>
-      <option value="El Cajon">El Cajon</option>
-      <option value="Encinitas">Encinitas</option>
-      <option value="Mobile Service">Mobile Service</option>
+      <option value="Tustin">Tustin</option>
+      <option value="Placentia">Placentia</option>
     </select>
   </div>
 );

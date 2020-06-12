@@ -35,13 +35,13 @@ export const Locations = ({ locations }) => (
   <>
     <div className="container">
       <div className="columns">
-        <div className="column col-md-12 col-4">
+        {/* <div className="column col-md-12 col-4">
           <div className="column col-xl-12 col-12 col-mx-auto">
-            <h2 className="text-center">Contact Us</h2>
-            <AppointmentForm appointmentType={"walkin"} />
+            <h2 className="text-center">Make a Reservation</h2>
+            <AppointmentForm appointmentTypes={["walkin"]} />
           </div>
-        </div>
-        <div className="column col-md-12 col-8">
+        </div> */}
+        <div className="column col-md-12 col-12">
           <div className="columns">
             {locations ? (
               Array.isArray(locations) ? (

@@ -8,7 +8,7 @@ import { HasMenu } from "../components/MenuPrices/MenuPricesSchema";
 import AboutUs from "../components/AboutUs/AboutUs";
 import ContactUs from "../components/SchemaContactUs/ContactUs";
 import Content from "../src/data/content";
-// import AppointmentForm from "../components/AppointmentForm";
+import AppointmentForm from "../components/SchemaContactUs/AppointmentForm/AppointmentForm";
 import ContactForm from "../components/ContactUs/ContactForm";
 
 import menus from "../src/data/schema/menu/menu";
@@ -49,18 +49,30 @@ export default () => (
           FROM THE COAST OF BAJA TO THE MEDITERRANEAN
         </h3>
       </Section>
-      {/*  <Section name="content">
+      <Section>
+        <div className="container">
+          <div className="columns">
+            <div className="column col-md-12 col-9 col-mx-auto">
+              {/*  <Section name="content">
         <div className="content">{Content}</div>
       </Section> */}
-      <Section name="menu-price">
-        <h2>Menus</h2>
-        <SchemaMenu menus={menus} />
-      </Section>
-      <Section name="about-us">
-        <AboutUs />
-      </Section>
-      <Section name="contact-us">
-        <ContactUs schema={schema} />
+              <Section name="menu-price">
+                <h2>Menus</h2>
+                <SchemaMenu menus={menus} />
+              </Section>
+              <Section name="about-us">
+                <AboutUs />
+              </Section>
+              <Section name="contact-us">
+                <ContactUs schema={schema} />
+              </Section>
+            </div>
+            <div className="column col-md-12 col-3 col-mx-auto">
+              <h2 className="text-center">Make a Reservation</h2>
+              <AppointmentForm appointmentTypes={["walkin"]} />
+            </div>
+          </div>
+        </div>
       </Section>
     </SinglePage>
     <style jsx global>
@@ -100,7 +112,7 @@ const Section = ({ name, children }) => (
   <section className={`section section-${name}`}>
     <div className="container">
       <div className="columns">
-        <div className="column col-md-12 col-xl-10 col-8 col-mx-auto">
+        <div className="column col-md-12 col-xl-10 col-10 col-mx-auto">
           <div className="">{children}</div>
         </div>
       </div>
