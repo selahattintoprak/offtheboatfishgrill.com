@@ -59,11 +59,11 @@ export default ({
       <TypographyStyles />
       <LayoutStyles />
       <MenusStyles />
-      <OffCanvasStyles />
+      {/* <OffCanvasStyles /> */}
       <ButtonsStyles />
-      {/* <IconsStyles /> */}
+      {/* <IconsStyles /> 
       <NavbarStyles />
-      <NavsStyles />
+      <NavsStyles />*/}
       <FormsStyles />
       {/* <CardsStyles /> */}
       <style jsx global>
