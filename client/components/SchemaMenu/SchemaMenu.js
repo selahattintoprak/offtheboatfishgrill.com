@@ -45,7 +45,7 @@ export const MenuTree = ({ id, menus, children }) => {
                 icon={faChevronDown}
               />
             </h2>
-            <div className="amp-accordion-body my-2 p-2">
+            <div className="amp-accordion-body my-2 p-1">
               <div className="container">
                 {description && <div className="mb-2">{description}</div>}
                 {children}

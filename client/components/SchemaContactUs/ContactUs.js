@@ -6,6 +6,7 @@ import {
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import ContactForm from "./ContactForm";
+import AppointmentForm from "./AppointmentForm/AppointmentForm";
 import {
   findReplaceSchemaById,
   filterSchemaByType,
@@ -37,7 +38,7 @@ export const Locations = ({ locations }) => (
         <div className="column col-md-12 col-4">
           <div className="column col-xl-12 col-12 col-mx-auto">
             <h2 className="text-center">Contact Us</h2>
-            <ContactForm />
+            <AppointmentForm appointmentType={"walkin"} />
           </div>
         </div>
         <div className="column col-md-12 col-8">

@@ -100,7 +100,7 @@ const Section = ({ name, children }) => (
   <section className={`section section-${name}`}>
     <div className="container">
       <div className="columns">
-        <div className="column col-xl-10 col-8 col-mx-auto">
+        <div className="column col-md-12 col-xl-10 col-8 col-mx-auto">
           <div className="">{children}</div>
         </div>
       </div>
