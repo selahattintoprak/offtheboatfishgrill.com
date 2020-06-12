@@ -3,6 +3,7 @@ import { faCaretDown, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import sidebarScss from "./sidebar.scss";
 import ActiveLink from "../../ActiveLink";
 import { AmpIncludeAmpSidebar } from "../../amp/AmpCustomElement";
+
 const Nested = ({ sidebarItems, navbarActions }) => (
   <amp-nested-menu layout="fill">
     <ul>

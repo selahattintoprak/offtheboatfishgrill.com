@@ -31,19 +31,16 @@ export const MenuTree = ({ id, menus, parentName, children }) => {
       } = menu;
       let link = `schema${toLowerCaseDash(parentName) &&
         toLowerCaseDash(parentName) + ""}${toLowerCaseDash(name)}`;
+      let parent = toLowerCaseDash(parentName) || toLowerCaseDash(name);
       return (
         <amp-accordion
-          id={toLowerCaseDash(name)}
+          id={parent}
           className="amp-accordion-container"
           disable-session-states=""
           animate=""
           key={index}
         >
-          <section
-            className="amp-accordion"
-            key={id}
-            id={link}
-          >
+          <section className="amp-accordion" key={id} id={link}>
             <h2
               className="amp-accordion-header"
               style={{ fontSize: "1rem", padding: "0.3rem" }}
