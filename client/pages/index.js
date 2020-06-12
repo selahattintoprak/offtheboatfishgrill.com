@@ -70,7 +70,7 @@ export default () => (
             <div className="column col-md-12 col-3 col-mx-auto">
               <h2 className="text-center">Make a Reservation</h2>
               <AppointmentForm
-                appointmentTypes={["both", "walkin", "mobile"]}
+                appointmentTypes={["walkin"]}
               />
             </div>
           </div>
