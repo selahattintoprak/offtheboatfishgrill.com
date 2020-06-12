@@ -17,9 +17,9 @@ export default ({ navbarItems }) => (
     </style>
   </>
 );
-const MenuItem = ({ title, link, index }) => (
+const MenuItem = ({ title, link, on, index }) => (
   <li key={index} className="menu-item">
-    <ActiveLink activeClassName="active" href={link}>
+    <ActiveLink activeClassName="active" href={link} on={on}>
       <a className="btn btn-link">{title}</a>
     </ActiveLink>
   </li>
@@ -41,7 +41,12 @@ const SubmenuItem = ({ title, link, columns }) => (
         <ul className="menu" style={{ display: "block" }}>
           <div className="columns">
             {columns.map(({ divider, items }, index) => (
-              <Column key={index} divider={divider} items={items} index={index} />
+              <Column
+                key={index}
+                divider={divider}
+                items={items}
+                index={index}
+              />
             ))}
           </div>
         </ul>
@@ -60,11 +65,11 @@ const Column = ({ items, index, divider }) => (
     </div>
   </>
 );
-const Item = ({ title, link, divider }) => (
+const Item = ({ title, link, on, divider }) => (
   <>
     {divider && <li className="divider" data-content={divider}></li>}
     <li className="menu-item">
-      <ActiveLink activeClassName="active" href={link}>
+      <ActiveLink activeClassName="active" href={link} on={on}>
         <a>{title}</a>
       </ActiveLink>
     </li>

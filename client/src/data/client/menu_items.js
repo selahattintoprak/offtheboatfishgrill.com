@@ -3,53 +3,8 @@ import {
   findReplaceSchemaById,
   filterSchemaByType,
 } from "../../../lib/schema/index";
+import { toLowerCaseDash } from "../../../lib/helpers/index";
 
-const toLowerCaseDash = (value) =>
-  (value &&
-    value
-      .split(" ")
-      .join("-")
-      .toLocaleLowerCase()) ||
-  "";
-
-export let menuItems = [
-  { title: "Home", link: "/" },
-  /*    {
-    title: "Menu",
-    link: "#menu",
-    back: "Menu",
-    columns: [
-      {
-        divider: null,
-        items: [
-          { title: "Appetizers", link: "/#appetizers" },
-          { title: "Salads", link: "#salads" },
-          { title: "Plates", link: "#plates" },
-          { title: "Soups", link: "#soups" },
-          { title: "Sliders", link: "#sliders" },
-          { title: "Tacos", link: "#tacos" },
-          { title: "Pita Wraps", link: "#pita-wraps" },
-          { title: "Baja Bowls", link: "#baja-bowls" },
-          { title: "Family Platters", link: "#family-platters" },
-          { title: "Proteins (a la carte)", link: "#proteins" },
-          { title: "Kids Menu", link: "#kids-menu" },
-          { title: "Sides", link: "#sides" },
-          { title: "Deserts", link: "#deserts" },
-        ],
-      },
-       {
-        divider: "Storage",
-        items: [
-          { title: "Storage Services", link: "/storage-services" },
-          { title: "Self Storage", link: "/storage-self" },
-          { title: "Warehouse", link: "/storage-warehouse" },
-          { title: "Moving Insurance", link: "/moving-insurance", divider: "Insurance" },
-        ],
-      },
-    ],
-  }, */
-  { title: "Locations", link: "#locations" },
-];
 export const hasMenu = (menus) => {
   let newmenu = JSON.stringify(menus, findReplaceSchemaById(menus));
   let newMenuParsed = JSON.parse(newmenu);
@@ -69,17 +24,22 @@ const menuTree = (menus, parentName) => {
         hasMenuSection,
         menuAddon,
       } = menu;
-      let link = `${toLowerCaseDash(parentName) &&
-        toLowerCaseDash(parentName) + "-"}${toLowerCaseDash(name)}`;
+      let link = `schema${toLowerCaseDash(parentName) &&
+        toLowerCaseDash(parentName) + ""}${toLowerCaseDash(name)}`;
+      let parent = toLowerCaseDash(parentName) || toLowerCaseDash(name);
+      let on = parentName
+        ? `tap:${parent}.toggle, ${parent}.toggle(section='${link}'), ${link}.scrollTo(duration=200)`
+        : `tap:${parent}.toggle, ${parent}.scrollTo(duration=200)`;
       let columns = hasMenuSection && menuTree(hasMenuSection, name);
       return columns
         ? {
             title: name,
-            link,
+            link: "",
             back: name,
             columns: [{ items: columns }],
+            on,
           }
-        : { title: name, link };
+        : { title: name, link: "", on };
     });
   return menuTreeItems;
 };
