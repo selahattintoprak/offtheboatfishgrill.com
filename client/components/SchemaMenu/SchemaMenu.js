@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { findReplaceSchemaById, filterSchemaByType } from "../../lib/schema/index";
 import MenuItem from "./MenuItem";
+
 const hasChildren = ({ children }) => children && children.length;
 
 export const HasMenu = ({ menus = null, children }) => {
@@ -12,8 +13,8 @@ export const HasMenu = ({ menus = null, children }) => {
   return <MenuTree id="schema-menu" menus={filteredMenus} />;
 };
 
-export const MenuTree = ({ id, menus, children }) => {
-  //console.log("MenuPrices menu", menus);
+export const MenuTree = ({ id, menus, parentName, children }) => {
+  console.log("MenuPrices menu", menus);
   return (
     Array.isArray(menus) &&
     menus.map((menu, index) => {
@@ -27,7 +28,7 @@ export const MenuTree = ({ id, menus, children }) => {
       } = menu;
       return (
         <amp-accordion
-          id={id}
+          id={name}
           className="amp-accordion-container"
           disable-session-states=""
           animate=""
@@ -68,7 +69,7 @@ export const MenuTree = ({ id, menus, children }) => {
                   )
                 ) : null}
                 
-                {hasMenuSection && <MenuTree menus={hasMenuSection} />}
+                {hasMenuSection && <MenuTree menus={hasMenuSection} parentName={name}/>}
               </div>
             </div>
           </section>

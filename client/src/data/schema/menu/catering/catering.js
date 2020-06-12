@@ -4,7 +4,7 @@ export default {
   "@context": "http://schema.org",
   "@type": "Menu",
   "@id": siteUrl + "/#/schema/menu/catering",
-  name: "Catering Menu",
+  name: "Catering",
   description: "Bring unique variety to your next event. We cater small and large groups",
   // image: "https://thisisarestaurant.com/starter_dishes.jpg",
   offers: {
