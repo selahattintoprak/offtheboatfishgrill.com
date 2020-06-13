@@ -2,7 +2,13 @@ import navbarScss from "./navbar.scss";
 import Brand from "../Brand/Brand";
 import NavbarItems from "../Navbar/NavbarItems";
 
-export default ({ children, navbarItems, navbarActions, logoLink, navbarToggle }) => (
+export default ({
+  children,
+  navbarItems,
+  navbarActions,
+  logoLink,
+  navbarToggle,
+}) => (
   <>
     <header className="app-header">
       <Brand logoLink={logoLink} />

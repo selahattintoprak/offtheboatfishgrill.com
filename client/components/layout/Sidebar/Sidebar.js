@@ -3,13 +3,19 @@ import { faCaretDown, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import sidebarScss from "./sidebar.scss";
 import ActiveLink from "../../ActiveLink";
 import { AmpIncludeAmpSidebar } from "../../amp/AmpCustomElement";
-const NestedSubMenu = ({ title, link, on, columns, back }) => (
+const NestedSubMenu = ({ title, link, on, columns, back }, index) => (
   <>
     {columns && (
       <>
         <li className="menu-item">
           <HrefActiveLink title={title} link={link} on={on} />
-          <h4 className="btn" amp-nested-submenu-open="" on={on}>
+          <h4
+            className="btn"
+            amp-nested-submenu-open=""
+            on={on}
+            role="button"
+            tabIndex={index}
+          >
             {/* <i className="icon icon-caret"></i> */}
             <FontAwesomeIcon className="icon" icon={faCaretDown} />
           </h4>

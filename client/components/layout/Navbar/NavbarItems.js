@@ -17,11 +17,7 @@ export default ({ navbarItems }) => (
     </style>
   </>
 );
-const MenuItem = ({ title, link, on, index }) => (
-  <li key={index} className="menu-item">
-    <HrefActiveLink title={title} link={link} on={on} />
-  </li>
-);
+
 const SubmenuItem = ({ title, link, on, columns }) => (
   <>
     <li className="menu-item">
@@ -61,12 +57,22 @@ const Column = ({ items, index, divider }) => (
     </div>
   </>
 );
-const Item = ({ title, link, on, divider }) => (
+const Item = ({ title, link, columns, on, divider, ...rest }) => (
   <>
     {divider && <li className="divider" data-content={divider}></li>}
-    <li className="menu-item">
-      <HrefActiveLink title={title} link={link} on={on} />
-    </li>
+    {columns ? (
+      <SubmenuItem
+        title={title}
+        link={link}
+        on={on}
+        columns={columns}
+        {...rest}
+      />
+    ) : (
+      <li className="menu-item">
+        <HrefActiveLink title={title} link={link} on={on} />
+      </li>
+    )}
   </>
 );
 const HrefActiveLink = ({ title, link, on }) =>
@@ -79,3 +85,8 @@ const HrefActiveLink = ({ title, link, on }) =>
       {title}
     </a>
   );
+const MenuItem = ({ title, link, on, index }) => (
+  <li key={index} className="menu-item">
+    <HrefActiveLink title={title} link={link} on={on} />
+  </li>
+);
