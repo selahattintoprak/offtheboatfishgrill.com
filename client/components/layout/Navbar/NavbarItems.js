@@ -19,17 +19,13 @@ export default ({ navbarItems }) => (
 );
 const MenuItem = ({ title, link, on, index }) => (
   <li key={index} className="menu-item">
-    <ActiveLink activeClassName="active" href={link} on={on}>
-      <a className="btn btn-link">{title}</a>
-    </ActiveLink>
+    <HrefActiveLink title={title} link={link} on={on} />
   </li>
 );
-const SubmenuItem = ({ title, link, columns }) => (
+const SubmenuItem = ({ title, link, on, columns }) => (
   <>
     <li className="menu-item">
-      <ActiveLink activeClassName="active" href={link}>
-        <a className="btn btn-link">{title}</a>
-      </ActiveLink>
+      <HrefActiveLink title={title} link={link} on={on} />
     </li>
     <li className="menu-item">
       <a href="#" className="btn" role="button">
@@ -69,9 +65,17 @@ const Item = ({ title, link, on, divider }) => (
   <>
     {divider && <li className="divider" data-content={divider}></li>}
     <li className="menu-item">
-      <ActiveLink activeClassName="active" href={link} on={on}>
-        <a>{title}</a>
-      </ActiveLink>
+      <HrefActiveLink title={title} link={link} on={on} />
     </li>
   </>
 );
+const HrefActiveLink = ({ title, link, on }) =>
+  link ? (
+    <ActiveLink activeClassName="active" href={link} on={on}>
+      <a className="btn btn-link">{title}</a>
+    </ActiveLink>
+  ) : (
+    <a className="btn btn-link" on={on}>
+      {title}
+    </a>
+  );

@@ -38,7 +38,9 @@ export default ({
           logoLink={logoLink}
         />
 
-        {sidebarItems && <Sidebar sidebarItems={sidebarItems} navbarActions={navbarActions} />}
+        {sidebarItems && (
+          <Sidebar sidebarItems={sidebarItems} navbarActions={navbarActions} />
+        )}
 
         {sidebar}
 
@@ -62,8 +64,8 @@ export default ({
       {/* <OffCanvasStyles /> */}
       <ButtonsStyles />
       {/* <IconsStyles /> 
-      <NavbarStyles />
-      <NavsStyles />*/}
+      <NavbarStyles />*/}
+      <NavsStyles />
       <FormsStyles />
       {/* <CardsStyles /> */}
       <style jsx global>
@@ -87,7 +89,9 @@ export default ({
             float: right;
             transition: transform 0.25s;
           }
-          .amp-accordion .amp-accordion-header[aria-expanded="true"] .amp-accordion-icon {
+          .amp-accordion
+            .amp-accordion-header[aria-expanded="true"]
+            .amp-accordion-icon {
             transform: rotate(-180deg);
           }
           .text-end {

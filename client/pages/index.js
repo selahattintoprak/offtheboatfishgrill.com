@@ -14,7 +14,7 @@ import ContactForm from "../components/ContactUs/ContactForm";
 import menus from "../src/data/schema/menu/menu";
 import schema from "../src/data/schema/schema";
 import SchemaMenu from "../components/SchemaMenu/SchemaMenu";
-export const config = { amp: "hybrid" };
+export const config = { amp: true };
 
 let hCss = {
   fontWeight: "bold",
