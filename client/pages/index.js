@@ -14,7 +14,7 @@ import ContactForm from "../components/ContactUs/ContactForm";
 import menus from "../src/data/schema/menu/menu";
 import schema from "../src/data/schema/schema";
 import SchemaMenu from "../components/SchemaMenu/SchemaMenu";
-export const config = { amp: true };
+export const config = { amp: "hybrid" };
 
 let hCss = {
   fontWeight: "bold",
@@ -63,15 +63,13 @@ export default () => (
               <Section name="about-us">
                 <AboutUs />
               </Section>
-              <Section name="contact-us">
+              <Section name="contact-us" id="locations">
                 <ContactUs schema={schema} />
               </Section>
             </div>
             <div className="column col-md-12 col-3 col-mx-auto">
               <h2 className="text-center">Make a Reservation</h2>
-              <AppointmentForm
-                appointmentTypes={["walkin"]}
-              />
+              <AppointmentForm appointmentTypes={["walkin"]} />
             </div>
           </div>
         </div>
@@ -110,8 +108,8 @@ export default () => (
     </style>
   </>
 );
-const Section = ({ name, children }) => (
-  <section className={`section section-${name}`}>
+const Section = ({ name, children, ...rest }) => (
+  <section className={`section section-${name}`} {...rest}>
     <div className="container">
       <div className="columns">
         <div className="column col-md-12 col-xl-10 col-10 col-mx-auto">

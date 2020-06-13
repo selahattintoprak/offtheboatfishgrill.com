@@ -3,11 +3,49 @@ import { faCaretDown, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import sidebarScss from "./sidebar.scss";
 import ActiveLink from "../../ActiveLink";
 import { AmpIncludeAmpSidebar } from "../../amp/AmpCustomElement";
-
+const NestedSubMenu = ({ title, link, on, columns, back }) => (
+  <>
+    {columns && (
+      <>
+        <li className="menu-item">
+          <HrefActiveLink title={title} link={link} on={on} />
+          <h4 className="btn" amp-nested-submenu-open="" on={on}>
+            {/* <i className="icon icon-caret"></i> */}
+            <FontAwesomeIcon className="icon" icon={faCaretDown} />
+          </h4>
+          <div amp-nested-submenu="">
+            <ul>
+              {back && (
+                <li className="menu-item">
+                  <h6
+                    amp-nested-submenu-close=""
+                    className="btn btn-link"
+                    style={{ margin: 0 }}
+                  >
+                    {/* <i className="icon icon-arrow-left"></i> */}
+                    <FontAwesomeIcon className="mr-1" icon={faCaretLeft} />
+                    {back}
+                  </h6>
+                </li>
+              )}
+              <div className="columns" style={{ flexDirection: "column" }}>
+                {columns.map(({ divider, items }, index) => (
+                  <React.Fragment key={index}>
+                    <Column divider={divider} items={items} index={index} />
+                  </React.Fragment>
+                ))}
+              </div>
+            </ul>
+          </div>
+        </li>
+      </>
+    )}{" "}
+  </>
+);
 const Nested = ({ sidebarItems, navbarActions }) => (
-  <amp-nested-menu layout="fill">
+  <amp-nested-menu layout="fill" className="sidebar-menu">
     <ul>
-      {sidebarItems.map(({ title, link, on, columns, back }, index) => (
+      {sidebarItems.map(({ title, link, on, columns, ...rest }, index) => (
         <React.Fragment key={index}>
           {!columns && (
             <li className="menu-item">
@@ -15,50 +53,14 @@ const Nested = ({ sidebarItems, navbarActions }) => (
             </li>
           )}
           {columns && (
-            <>
-              <li className="menu-item">
-                <HrefActiveLink title={title} link={link} on={on} />
-                <h4 className="btn" amp-nested-submenu-open="">
-                  {/* <i className="icon icon-caret"></i> */}
-                  <FontAwesomeIcon className="icon" icon={faCaretDown} />
-                </h4>
-                <div amp-nested-submenu="">
-                  <ul className="menu" style={{ display: "block" }}>
-                    {back && (
-                      <li className="menu-item">
-                        <h6
-                          amp-nested-submenu-close=""
-                          className="btn btn-link"
-                          style={{ margin: 0 }}
-                        >
-                          {/* <i className="icon icon-arrow-left"></i> */}
-                          <FontAwesomeIcon
-                            className="mr-1"
-                            icon={faCaretLeft}
-                          />
-                          {back}
-                        </h6>
-                      </li>
-                    )}
-                    <div
-                      className="columns"
-                      style={{ flexDirection: "column" }}
-                    >
-                      {columns.map(({ divider, items }, index) => (
-                        <React.Fragment key={index}>
-                          <Column
-                            divider={divider}
-                            items={items}
-                            index={index}
-                          />
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  </ul>
-                </div>
-              </li>
-            </>
-          )}{" "}
+            <NestedSubMenu
+              title={title}
+              link={link}
+              on={on}
+              columns={columns}
+              {...rest}
+            />
+          )}
         </React.Fragment>
       ))}
       {navbarActions && <li className="sidebar-actions">{navbarActions}</li>}
@@ -93,12 +95,23 @@ const Column = ({ items, index, divider }) => (
     </div>
   </>
 );
-const Item = ({ title, link, on, divider }) => (
+const Item = ({ title, columns, link, on, divider, ...rest }) => (
   <>
     {divider && <li className="divider" data-content={divider}></li>}
-    <li className="menu-item">
-      <HrefActiveLink title={title} link={link} on={on} />
-    </li>
+
+    {columns ? (
+      <NestedSubMenu
+        title={title}
+        link={link}
+        on={on}
+        columns={columns}
+        {...rest}
+      />
+    ) : (
+      <li className="menu-item">
+        <HrefActiveLink title={title} link={link} on={on} />
+      </li>
+    )}
   </>
 );
 

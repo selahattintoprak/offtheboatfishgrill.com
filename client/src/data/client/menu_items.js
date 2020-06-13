@@ -13,7 +13,7 @@ export const hasMenu = (menus) => {
   return menuTree(filteredMenus);
 };
 
-const menuTree = (menus, parentName) => {
+const menuTree = (menus, parentName, parentOn = "") => {
   let menuTreeItems =
     Array.isArray(menus) &&
     menus.map((menu, index) => {
@@ -28,18 +28,23 @@ const menuTree = (menus, parentName) => {
         toLowerCaseDash(parentName) + ""}${toLowerCaseDash(name)}`;
       let parent = toLowerCaseDash(parentName) || toLowerCaseDash(name);
       let on = parentName
-        ? `tap:${parent}.toggle, ${parent}.toggle(section='${link}'), ${link}.scrollTo(duration=200)`
-        : `tap:${parent}.toggle, ${parent}.scrollTo(duration=200)`;
-      let columns = hasMenuSection && menuTree(hasMenuSection, name);
+        ? parentOn
+            .concat(`${parentOn && ","}${parent}.expand`)
+            .concat(", ", `${parent}.expand(section='${link}')`)
+            .concat(", ", `${link}.scrollTo(duration=200)`)
+        : parentOn
+            .concat(`${parentOn && ","}${parent}.expand`)
+            .concat(", ", `${parent}.scrollTo(duration=200)`);
+      let columns = hasMenuSection && menuTree(hasMenuSection, name, parentOn);
       return columns
         ? {
             title: name,
             link: "",
             back: name,
             columns: [{ items: columns }],
-            on,
+            on: "tap:" + on,
           }
-        : { title: name, link: "", on };
+        : { title: name, link: "", on: "tap:" + on };
     });
   return menuTreeItems;
 };
