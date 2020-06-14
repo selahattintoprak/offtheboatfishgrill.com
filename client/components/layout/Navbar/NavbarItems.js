@@ -32,12 +32,13 @@ const SubmenuItem = ({ title, link, on, columns }) => (
       <div role="dialog">
         <ul className="menu" style={{ display: "block" }}>
           <div className="columns">
-            {columns.map(({ divider, items }, index) => (
+            {columns.map(({ divider, items, ...rest }, index) => (
               <Column
                 key={index}
                 divider={divider}
                 items={items}
                 index={index}
+                {...rest}
               />
             ))}
           </div>
@@ -46,13 +47,56 @@ const SubmenuItem = ({ title, link, on, columns }) => (
     </li>
   </>
 );
+let rowStyle = {
+  display: "flex",
+  justifyContent: "space-between",
+};
+const DropDownMenuItem = ({ title, link, on, columns, index }) => (
+  <>
+    <div class="dropdown">
+      <div class="btn-group " style={{ ...rowStyle, flexDirection: "column" }}>
+        <li style={{ ...rowStyle, flexDirection: "row" }}>
+          {" "}
+          <a className="btn btn-link" on={on}>
+            {title}
+          </a>
+          <a href="#" className="btn dropdown-toggle" tabIndex={index}>
+            {/* <i className="icon icon-caret"></i> */}
+            <FontAwesomeIcon icon={faCaretDown} />
+          </a>
+        </li>
+
+        <ul className="menu">
+          <div className="columns">
+            {columns.map(({ divider, items, ...rest }, index) => (
+              <Column
+                key={index}
+                divider={divider}
+                items={items}
+                index={index}
+                {...rest}
+              />
+            ))}
+          </div>
+        </ul>
+      </div>
+    </div>
+    <style jsx global>
+      {`
+        .dropdown:hover .menu {
+          display: block;
+        }
+      `}
+    </style>
+  </>
+);
 const Column = ({ items, index, divider }) => (
   <>
     {index != 0 && divider && <div className="divider-vert"></div>}
     <div className="column">
       {divider && <li className="divider" data-content={divider}></li>}
-      {items.map(({ title, ...rest }) => (
-        <Item key={title} title={title} {...rest} />
+      {items.map(({ title, ...rest }, index) => (
+        <Item key={title} title={title} {...rest} index={index} />
       ))}
     </div>
   </>
@@ -61,7 +105,7 @@ const Item = ({ title, link, columns, on, divider, ...rest }) => (
   <>
     {divider && <li className="divider" data-content={divider}></li>}
     {columns ? (
-      <SubmenuItem
+      <DropDownMenuItem
         title={title}
         link={link}
         on={on}

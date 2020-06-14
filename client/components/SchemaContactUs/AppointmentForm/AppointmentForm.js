@@ -53,7 +53,7 @@ export default ({ appointmentTypes }) => {
         </fieldset>
         <SubmitFields />
       </form>
-      <TabsStyles />
+      {appointmentTypes.includes("both") && <TabsStyles />}
     </>
   );
 };

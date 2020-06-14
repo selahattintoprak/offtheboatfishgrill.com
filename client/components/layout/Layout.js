@@ -64,8 +64,8 @@ export default ({
       {/* <OffCanvasStyles /> */}
       <ButtonsStyles />
       {/* <IconsStyles /> 
-      <NavbarStyles />*/}
-      <NavsStyles />
+      <NavbarStyles />
+      <NavsStyles />*/}
       <FormsStyles />
       {/* <CardsStyles /> */}
       <style jsx global>

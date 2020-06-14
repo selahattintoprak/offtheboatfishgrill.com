@@ -15,7 +15,14 @@ export default ({
       {navbarItems && (
         <amp-mega-menu className="app-mega-menu" id="mega-menu" height="55px">
           <nav className="app-navbar" style={{ height: "55px" }}>
-            <ul className="nav app-nav" style={{ flexDirection: "row" }}>
+            <ul
+              className="nav app-nav"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
               <NavbarItems navbarItems={navbarItems} />
             </ul>
           </nav>
